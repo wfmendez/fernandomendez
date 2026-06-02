@@ -514,14 +514,14 @@ function initStatCounters() {
       if (!e.isIntersecting) return;
       const el     = e.target;
       const target = parseInt(el.dataset.target, 10);
-      if (prefersReduced) { el.textContent = target + '+'; obs.unobserve(el); return; }
+      if (prefersReduced) { el.textContent = target; obs.unobserve(el); return; }
       
       let current = 0;
       // If target is small, increment by 1 with a slower tick rate (e.g. 250ms)
       if (target <= 5) {
         const ticker = setInterval(() => {
           current += 1;
-          el.textContent = current + '+';
+          el.textContent = current;
           if (current >= target) {
             clearInterval(ticker);
           }
