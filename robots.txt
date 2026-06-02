@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: replace your-domain.com with your real domain before going live
-Sitemap: https://your-domain.com/sitemap.xml
+Sitemap: https://fernandomendez.online/sitemap.xml

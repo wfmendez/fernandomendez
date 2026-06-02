@@ -9,8 +9,8 @@
   <meta name="description" content="Fernando Mendez — Full-Stack Developer building AI-powered apps: LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript, and Python. Based in Venezuela." />
   <meta name="author" content="Fernando Mendez" />
   <meta name="keywords" content="Fernando Mendez, AI Developer, Full Stack Developer, LLM, RAG, Chatbots, AI Agents, Automation, n8n, Next.js, TypeScript, Python, React, Node.js, Venezuela" />
-  <!-- TODO: replace your-domain.com with your real domain -->
-  <link rel="canonical" href="https://your-domain.com/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fernandomendez.online/" />
   <meta name="theme-color" content="#050508" />
   <meta name="color-scheme" content="dark" />
 
@@ -19,8 +19,8 @@
   <meta property="og:site_name" content="Fernando Mendez" />
   <meta property="og:title" content="Fernando Mendez — AI &amp; Full-Stack Developer" />
   <meta property="og:description" content="Building AI-powered apps — LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript &amp; Python." />
-  <meta property="og:url" content="https://your-domain.com/" />
-  <meta property="og:image" content="https://your-domain.com/assets/og-image.png" />
+  <meta property="og:url" content="https://fernandomendez.online/" />
+  <meta property="og:image" content="https://fernandomendez.online/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Fernando Mendez — AI &amp; Full-Stack Developer" />
@@ -30,10 +30,11 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Fernando Mendez — AI &amp; Full-Stack Developer" />
   <meta name="twitter:description" content="Building AI-powered apps — LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript &amp; Python." />
-  <meta name="twitter:image" content="https://your-domain.com/assets/og-image.png" />
+  <meta name="twitter:image" content="https://fernandomendez.online/assets/og-image.png" />
 
   <!-- Icons -->
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/favicon.svg" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -47,30 +48,39 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="js/main.js" defer></script>
 
-  <!-- Structured data: Person -->
+  <!-- Structured data: Person & WebSite -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Fernando Mendez",
-    "jobTitle": "AI & Full-Stack Developer",
-    "url": "https://your-domain.com/",
-    "image": "https://your-domain.com/assets/og-image.png",
-    "email": "mailto:wuillian.f.mendez@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "VE"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Fernando Mendez",
+      "jobTitle": "AI & Full-Stack Developer",
+      "url": "https://fernandomendez.online/",
+      "image": "https://fernandomendez.online/assets/og-image.png",
+      "email": "mailto:wuillian.f.mendez@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "VE"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Brigham Young University–Idaho"
+      },
+      "knowsAbout": ["Artificial Intelligence", "Large Language Models", "RAG", "Chatbots", "AI Agents", "Automation", "Next.js", "TypeScript", "React", "Node.js", "Python", "Web3"],
+      "sameAs": [
+        "https://github.com/wfmendez",
+        "https://www.linkedin.com/in/wf-mendez"
+      ]
     },
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Brigham Young University–Idaho"
-    },
-    "knowsAbout": ["Artificial Intelligence", "Large Language Models", "RAG", "Chatbots", "AI Agents", "Automation", "Next.js", "TypeScript", "React", "Node.js", "Python", "Web3"],
-    "sameAs": [
-      "https://github.com/wfmendez",
-      "https://www.linkedin.com/in/wf-mendez"
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Fernando Mendez — AI & Full-Stack Developer",
+      "url": "https://fernandomendez.online/",
+      "description": "Fernando Mendez — Full-Stack Developer building AI-powered apps: LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript, and Python."
+    }
+  ]
   </script>
 </head>
 <body class="loading">
@@ -337,7 +347,7 @@
             <h3 class="project-title">ContentFlow — AI Content Pipeline</h3>
             <p class="project-desc">An open-source SaaS that automates the entire content cycle: it monitors RSS feeds and Reddit every 6 hours, scores trending topics with AI (Gemini 1.5 Flash + Groq Llama 3.3), and drafts LinkedIn posts, blogs, and newsletters for human review. Per-draft AI transparency — tokens, cost, and prompt used — at roughly $0.001 per trend. End-to-end tested with Playwright.</p>
             <div class="project-links">
-              <a href="https://github.com/wfmendez/REPLACE-WITH-CONTENTFLOW-REPO" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
+              <a href="https://github.com/wfmendez" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
                 <span>View Code</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
@@ -390,7 +400,7 @@
                 <span>View Code</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="https://github.com/wfmendez/strata" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub">
+              <a href="https://github.com/wfmendez/strata" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub" aria-label="View STRATA repository on GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
               </a>
             </div>
