@@ -514,14 +514,29 @@ function initStatCounters() {
       if (!e.isIntersecting) return;
       const el     = e.target;
       const target = parseInt(el.dataset.target, 10);
-      if (prefersReduced) { el.textContent = target; obs.unobserve(el); return; }
-      let current  = 0;
-      const step   = target / 60;
-      const ticker = setInterval(() => {
-        current += step;
-        if (current >= target) { current = target; clearInterval(ticker); }
-        el.textContent = Math.floor(current);
-      }, 25);
+      if (prefersReduced) { el.textContent = target + '+'; obs.unobserve(el); return; }
+      
+      let current = 0;
+      // If target is small, increment by 1 with a slower tick rate (e.g. 250ms)
+      if (target <= 5) {
+        const ticker = setInterval(() => {
+          current += 1;
+          el.textContent = current + '+';
+          if (current >= target) {
+            clearInterval(ticker);
+          }
+        }, 250);
+      } else {
+        const step = target / 50;
+        const ticker = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(ticker);
+          }
+          el.textContent = Math.floor(current) + '+';
+        }, 30);
+      }
       obs.unobserve(el);
     });
   }, { threshold: 0.5 });
