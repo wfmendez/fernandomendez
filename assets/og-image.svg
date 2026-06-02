@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="100%" stop-color="#050508"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#00D4FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="80%" cy="22%" r="60%">
+      <stop offset="0%" stop-color="#6C63FF" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#6C63FF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(96,86)">
+    <polygon points="40,4 72,22.5 72,59.5 40,78 8,59.5 8,22.5" fill="none" stroke="url(#accent)" stroke-width="3"/>
+    <text x="40" y="41" dominant-baseline="central" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800">FM</text>
+  </g>
+  <text x="94" y="332" fill="#f0f0f8" font-family="Segoe UI, Arial, sans-serif" font-size="92" font-weight="800" letter-spacing="-2">Fernando Mendez</text>
+  <text x="98" y="412" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700">
+    <tspan fill="url(#accent)">Full-Stack</tspan><tspan fill="#8888aa">&#160;&amp;&#160;</tspan><tspan fill="url(#accent)">Web3 Developer</tspan>
+  </text>
+  <text x="100" y="480" fill="#8888aa" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="400">React &#183; TypeScript &#183; Solidity &#183; Node.js</text>
+  <rect x="100" y="524" width="210" height="6" rx="3" fill="url(#accent)"/>
+  <text x="1104" y="556" text-anchor="end" fill="#5a5a78" font-family="Segoe UI, Arial, sans-serif" font-size="24">Venezuela</text>
+</svg>

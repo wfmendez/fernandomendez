@@ -1,0 +1,23 @@
+# Netlify configuration — static site (no build step)
+[build]
+  publish = "."
+
+# Security headers applied to every response
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    # Optional hardening — uncomment AFTER testing that nothing breaks.
+    # This Content-Security-Policy whitelists exactly what the site uses:
+    # Three.js (cdnjs), Google Fonts, and the Web3Forms endpoint.
+    # Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://api.web3forms.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://api.web3forms.com"
+
+# Long-cache immutable assets (images). CSS/JS keep platform defaults so
+# edits show up immediately without filename fingerprinting.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

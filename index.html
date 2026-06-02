@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary meta -->
+  <title>Fernando Mendez — Full Stack &amp; Web3 Developer</title>
+  <meta name="description" content="Fernando Mendez — Full Stack Developer building modern web apps and decentralized applications with React, TypeScript, and Solidity. Based in Venezuela." />
+  <meta name="author" content="Fernando Mendez" />
+  <meta name="keywords" content="Fernando Mendez, Full Stack Developer, Web3 Developer, React, TypeScript, Solidity, Blockchain, Ethereum, Polygon, Node.js, Venezuela" />
+  <!-- TODO: replace your-domain.com with your real domain -->
+  <link rel="canonical" href="https://your-domain.com/" />
+  <meta name="theme-color" content="#050508" />
+  <meta name="color-scheme" content="dark" />
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fernando Mendez" />
+  <meta property="og:title" content="Fernando Mendez — Full Stack &amp; Web3 Developer" />
+  <meta property="og:description" content="Building modern web apps and decentralized applications with React, TypeScript, and Solidity." />
+  <meta property="og:url" content="https://your-domain.com/" />
+  <meta property="og:image" content="https://your-domain.com/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Fernando Mendez — Full-Stack &amp; Web3 Developer" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fernando Mendez — Full Stack &amp; Web3 Developer" />
+  <meta name="twitter:description" content="Building modern web apps and decentralized applications with React, TypeScript, and Solidity." />
+  <meta name="twitter:image" content="https://your-domain.com/assets/og-image.png" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fernando Mendez",
+    "jobTitle": "Full Stack & Web3 Developer",
+    "url": "https://your-domain.com/",
+    "image": "https://your-domain.com/assets/og-image.png",
+    "email": "mailto:wuillian.f.mendez@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "VE"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Brigham Young University–Idaho"
+    },
+    "knowsAbout": ["React", "TypeScript", "Solidity", "Web3", "Node.js", "Smart Contracts", "Ethereum", "Polygon"],
+    "sameAs": [
+      "https://github.com/wfmendez",
+      "https://www.linkedin.com/in/your-linkedin"
+    ]
+  }
+  </script>
+</head>
+<body class="loading">
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <svg class="preloader-logo" viewBox="0 0 60 60" fill="none">
+        <polygon points="30,4 56,18 56,42 30,56 4,42 4,18" stroke="url(#grad)" stroke-width="2" fill="none"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-size="16" font-weight="800">FM</text>
+        <defs>
+          <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6C63FF"/>
+            <stop offset="100%" stop-color="#00D4FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="preloader-bar"><div class="preloader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div id="cursor-outer"></div>
+  <div id="cursor-inner"></div>
+
+  <!-- Nav -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <svg viewBox="0 0 60 60" fill="none" width="36" height="36">
+        <polygon points="30,4 56,18 56,42 30,56 4,42 4,18" stroke="url(#nav-grad)" stroke-width="2" fill="none"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-size="14" font-weight="800">FM</text>
+        <defs>
+          <linearGradient id="nav-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6C63FF"/>
+            <stop offset="100%" stop-color="#00D4FF"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about" data-text="About">About</a></li>
+      <li><a href="#skills" data-text="Skills">Skills</a></li>
+      <li><a href="#projects" data-text="Projects">Projects</a></li>
+      <li><a href="#experience" data-text="Experience">Experience</a></li>
+      <li><a href="#contact" data-text="Contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for new projects
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line" data-text="Fernando">Fernando</span>
+        <span class="title-line gradient-text" data-text="Mendez">Mendez</span>
+        <span class="title-line" data-text="— Builds the Web.">— Builds the Web.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Full-Stack Developer specialised in <em>React, TypeScript &amp; Web3</em> —
+        crafting modern web apps and decentralised applications from
+        Venezuela.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary magnetic">
+          <span>View Work</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic">
+          <span>Let's Talk</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Years Building Web</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Web3 dApps Shipped</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="7">0</span><span class="stat-label">Certifications Earned</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-image-wrap">
+            <div class="about-image-placeholder">
+              <canvas id="about-canvas"></canvas>
+            </div>
+            <div class="about-tag tag-1">React + TypeScript</div>
+            <div class="about-tag tag-2">Solidity / Web3</div>
+            <div class="about-tag tag-3">Node.js</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label reveal-up">About Me</span>
+          <h2 class="section-title reveal-up">
+            From idea to <span class="gradient-text">on-chain reality</span>
+          </h2>
+          <p class="about-body reveal-up">
+            I'm a Full-Stack Developer pursuing a Bachelor of Software Development at
+            BYU-Idaho, with three years of freelance experience translating Figma designs
+            into clean, performant React and TypeScript code.
+          </p>
+          <p class="about-body reveal-up">
+            Lately I've been deep in Web3 — building decentralised applications on
+            Ethereum and Polygon with Solidity, Hardhat, Wagmi and Ethers.js. I love
+            turning blockchain complexity into experiences anyone can use.
+          </p>
+          <div class="about-signature reveal-up">
+            <svg viewBox="0 0 160 50" fill="none" class="signature-svg">
+              <path d="M10 40 Q30 5 50 30 Q70 55 90 20 Q110 -10 140 35" stroke="url(#sig-grad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <defs>
+                <linearGradient id="sig-grad" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#6C63FF"/>
+                  <stop offset="100%" stop-color="#00D4FF"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Fernando Mendez</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS ===================== -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Expertise</span>
+        <h2 class="section-title reveal-up">The tools I <span class="gradient-text">master</span></h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card reveal-up" data-delay="0">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#6C63FF" stroke-width="1.5"/><path d="M13 14l-5 6 5 6M27 14l5 6-5 6M22 12l-4 16" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <p>React, TypeScript, Vite, HTML5, CSS3, Figma-to-code</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card reveal-up" data-delay="100">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="8" stroke="#00D4FF" stroke-width="1.5"/><path d="M12 16h16M12 20h10M12 24h13" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Backend</h3>
+          <p>Node.js, Express.js, REST APIs, MongoDB, Python</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+        <!-- 3D / Creative -->
+        <div class="skill-card reveal-up" data-delay="200">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><polygon points="20,4 36,12 36,28 20,36 4,28 4,12" stroke="#FF6B9D" stroke-width="1.5"/><polygon points="20,12 28,16 28,24 20,28 12,24 12,16" stroke="#FF6B9D" stroke-width="1" opacity="0.5"/></svg>
+          </div>
+          <h3>Web3 &amp; Blockchain</h3>
+          <p>Solidity, Hardhat, Ethers.js, Wagmi, Alchemy API</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+        <!-- DevOps -->
+        <div class="skill-card reveal-up" data-delay="300">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="#FFB347" stroke-width="1.5"/><path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="#FFB347" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Tools &amp; Deploy</h3>
+          <p>Git, GitHub, Render.com, Cloudinary, MongoDB Atlas</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+        <!-- Design -->
+        <div class="skill-card reveal-up" data-delay="400">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><path d="M8 32 Q16 8 20 8 Q24 8 32 32" stroke="#A855F7" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="3" fill="#A855F7"/></svg>
+          </div>
+          <h3>UI / UX Design</h3>
+          <p>Figma, Wireframing, Prototyping, Responsive design</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+        </div>
+        <!-- AI -->
+        <div class="skill-card reveal-up" data-delay="500">
+          <div class="skill-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" fill="none" stroke="#00FFB2" stroke-width="1.5"/><path d="M20 4L20 14M20 26L20 36M4 20L14 20M26 20L36 20M8 8L15 15M25 25L32 32M32 8L25 15M15 25L8 32" stroke="#00FFB2" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Languages &amp; Soft Skills</h3>
+          <p>JavaScript, TypeScript, Python, Solidity · EN/ES bilingual</p>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Work</span>
+        <h2 class="section-title reveal-up">Selected <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal-up" data-index="01">
+          <div class="project-meta">
+            <span class="project-number">01</span>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>React</span><span>TypeScript</span><span>Wagmi</span><span>Ethers.js</span>
+            </div>
+            <h3 class="project-title">Hey, View my NFTs!</h3>
+            <p class="project-desc">A dApp on Ethereum mainnet for browsing any wallet's NFT collection. Built with React + TypeScript + Vite, integrating Wagmi for wallet connections and the Alchemy API for efficient NFT metadata retrieval. React Query keeps state synchronised with the chain.</p>
+            <div class="project-links">
+              <a href="https://REPLACE-WITH-LIVE-DEMO-1.com" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
+                <span>View Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://github.com/wfmendez/REPLACE-WITH-REPO-1" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-canvas-wrap">
+              <canvas class="project-canvas" data-project="0"></canvas>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal-up" data-index="02">
+          <div class="project-meta">
+            <span class="project-number">02</span>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+            </div>
+            <h3 class="project-title">Adorable Turtles</h3>
+            <p class="project-desc">A full-stack web app focused on real-time data handling. React frontend with component-based architecture, RESTful API on Node.js + Express + MongoDB Atlas, image optimisation via Cloudinary, deployed on Render.com.</p>
+            <div class="project-links">
+              <a href="https://REPLACE-WITH-LIVE-DEMO-2.com" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
+                <span>View Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://github.com/wfmendez/REPLACE-WITH-REPO-2" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-canvas-wrap">
+              <canvas class="project-canvas" data-project="1"></canvas>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal-up" data-index="03">
+          <div class="project-meta">
+            <span class="project-number">03</span>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span>Solidity</span><span>Hardhat</span><span>Polygon</span>
+            </div>
+            <h3 class="project-title">DONA-POL</h3>
+            <p class="project-desc">A donation dApp on the Polygon network bringing transparency to charitable giving. Smart contracts written in Solidity to manage secure donation flows, developed and tested locally with Hardhat before mainnet deployment.</p>
+            <div class="project-links">
+              <a href="https://REPLACE-WITH-LIVE-DEMO-3.com" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
+                <span>View Case Study</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://github.com/wfmendez/REPLACE-WITH-REPO-3" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-canvas-wrap">
+              <canvas class="project-canvas" data-project="2"></canvas>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects-cta reveal-up">
+        <a href="https://github.com/wfmendez" target="_blank" rel="noopener noreferrer" class="btn btn-ghost magnetic">
+          <span>View All Projects on GitHub</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EXPERIENCE ===================== -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Journey</span>
+        <h2 class="section-title reveal-up">Where I've <span class="gradient-text">worked</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-item reveal-up" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Mar 2026 — Present</span>
+            <h3>Founding Member</h3>
+            <span class="timeline-company">DevAccelerator · London, UK · Remote</span>
+            <p>Founding member of a remote talent accelerator for software developers — helping build the program and community that levels up the next generation of engineers.</p>
+            <div class="timeline-skills"><span>Community</span><span>Mentorship</span><span>Startup</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Oct 2025 — Present</span>
+            <h3>Full Stack Developer &amp; Digital Marketing Systems Manager</h3>
+            <span class="timeline-company">Collab Collective Studio · Miami, FL · Remote</span>
+            <p>Architected <strong>Collab Map</strong> — a full-stack field-sales platform (Next.js 14, TypeScript, Supabase + PostGIS, Google Maps) unifying 3,000+ retail stores into one real-time dashboard with mobile GPS check-ins and route optimization. Also built AI-powered marketing automations (n8n, custom AI agents, APIs) and custom Wix/Shopify storefronts.</p>
+            <div class="timeline-skills"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>n8n</span><span>AI Agents</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Jan 2023 — Jan 2026</span>
+            <h3>Lead Automation Architect</h3>
+            <span class="timeline-company">NexDevp · Bogotá, Colombia · Remote</span>
+            <p>Designed scalable, AI-driven automation ecosystems that turned fragmented operations into modular digital solutions — deploying autonomous AI agents and API integrations across CRMs, databases, and e-commerce platforms to eliminate operational friction.</p>
+            <div class="timeline-skills"><span>n8n</span><span>AI Agents</span><span>API Integration</span><span>iPaaS</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Dec 2023 — Dec 2025</span>
+            <h3>Data Analyst &amp; Crypto Market Researcher</h3>
+            <span class="timeline-company">Freelance · Remote</span>
+            <p>Built data-driven trading strategies for crypto markets — analyzing price trends, on-chain metrics, and market sentiment to turn complex datasets into actionable, risk-managed insights.</p>
+            <div class="timeline-skills"><span>DeFi</span><span>Blockchain</span><span>On-chain Analytics</span><span>Data</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Oct 2022 — Dec 2025</span>
+            <h3>Web Developer</h3>
+            <span class="timeline-company">App Abundance · Turmero, Venezuela · Remote</span>
+            <p>My first professional programming role — owning end-to-end development of dynamic, responsive web solutions with a strong focus on UI/UX and back-end integration, while managing client relationships and project handovers.</p>
+            <div class="timeline-skills"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>UI/UX</span><span>GitHub</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Apr 2024 — Sep 2024</span>
+            <h3>Digital Marketing &amp; Content Manager</h3>
+            <span class="timeline-company">Ferre Newlink · Maracay, Venezuela · Hybrid</span>
+            <p>Led strategy, execution, and optimization of all digital marketing and sales initiatives — managing a small cross-functional team to grow brand visibility, engagement, and sales.</p>
+            <div class="timeline-skills"><span>Marketing Strategy</span><span>Team Leadership</span><span>Content</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Apr 2019 — Oct 2022</span>
+            <h3>Electronic Device Repair Technician</h3>
+            <span class="timeline-company">Freelance · Turmero, Venezuela · On-site</span>
+            <p>Provided diagnostic, maintenance, and repair services for phones, computers, tablets, and laptops — resolving both hardware and software issues. Where my problem-solving foundation began.</p>
+            <div class="timeline-skills"><span>Hardware</span><span>Software</span><span>Troubleshooting</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up" data-side="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-period">Jan 2022 — Present</span>
+            <h3>B.S. in Software Development</h3>
+            <span class="timeline-company">Brigham Young University–Idaho</span>
+            <p>Software engineering principles, OOP, and full-stack design — frontend, backend, and database management. Complemented by 7 industry certifications including Web3 Masterclass and Prompt Engineering Bootcamp (Zero To Mastery).</p>
+            <div class="timeline-skills"><span>OOP</span><span>Algorithms</span><span>Databases</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <canvas id="contact-canvas"></canvas>
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <span class="section-label reveal-up">Contact</span>
+          <h2 class="section-title reveal-up">
+            Let's build<br>something <span class="gradient-text">on-chain.</span>
+          </h2>
+          <p class="reveal-up">Open to freelance work, remote full-time roles, and Web3 collaborations. Reach out — I respond within 24 hours.</p>
+          <div class="contact-links reveal-up">
+            <a href="mailto:wuillian.f.mendez@gmail.com" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              wuillian.f.mendez@gmail.com
+            </a>
+            <a href="https://wa.me/584144896306" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              +58 414 489 6306
+            </a>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/wfmendez" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal-up" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- TODO: get your free key at https://web3forms.com and replace the value below.
+               Until then, the form gracefully falls back to opening the visitor's email app. -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New message from your portfolio" />
+          <input type="hidden" name="from_name" value="Portfolio Contact" />
+          <!-- Honeypot anti-spam: bots fill this, humans never see it -->
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true" />
+
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name"/>
+            <label for="name">Your Name</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder=" " required autocomplete="email"/>
+            <label for="email">Email Address</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="user_subject" placeholder=" " autocomplete="off"/>
+            <label for="subject">Subject</label>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder=" " rows="4" required></textarea>
+            <label for="message">Message</label>
+            <div class="form-line"></div>
+          </div>
+          <button type="submit" class="btn btn-primary magnetic form-submit">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <svg viewBox="0 0 60 60" fill="none" width="32" height="32">
+            <polygon points="30,4 56,18 56,42 30,56 4,42 4,18" stroke="url(#foot-grad)" stroke-width="2" fill="none"/>
+            <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="white" font-family="Syne" font-size="14" font-weight="800">FM</text>
+            <defs>
+              <linearGradient id="foot-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#6C63FF"/>
+                <stop offset="100%" stop-color="#00D4FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Fernando Mendez</span>
+        </div>
+        <p class="footer-copy">Crafted with precision &amp; passion · Venezuela · <span id="current-year"></span></p>
+        <div class="footer-links">
+          <a href="#hero">Back to top ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
