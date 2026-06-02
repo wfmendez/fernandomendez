@@ -603,6 +603,32 @@ function initFormEffects() {
     status.className = 'form-status' + (type ? ' ' + type : '');
   };
 
+  // Restore draft from localStorage
+  const inputs = {
+    name: qs('#name', form),
+    email: qs('#email', form),
+    subject: qs('#subject', form),
+    message: qs('#message', form)
+  };
+
+  try {
+    const draft = JSON.parse(localStorage.getItem('portfolio_contact_draft') || '{}');
+    Object.entries(inputs).forEach(([key, el]) => {
+      if (el && draft[key]) el.value = draft[key];
+    });
+  } catch (err) {
+    console.warn('Could not restore draft:', err);
+  }
+
+  // Listen to inputs to save draft
+  form.addEventListener('input', () => {
+    const draft = {};
+    Object.entries(inputs).forEach(([key, el]) => {
+      if (el) draft[key] = el.value;
+    });
+    localStorage.setItem('portfolio_contact_draft', JSON.stringify(draft));
+  });
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
 
@@ -611,14 +637,15 @@ function initFormEffects() {
     // No Web3Forms key configured yet → open the visitor's email app so the
     // form is never a dead end.
     if (!keyReady) {
-      const name    = (qs('#name')    || {}).value || '';
-      const email   = (qs('#email')   || {}).value || '';
-      const subject = (qs('#subject') || {}).value || 'Portfolio contact';
-      const message = (qs('#message') || {}).value || '';
+      const name    = (inputs.name || {}).value || '';
+      const email   = (inputs.email || {}).value || '';
+      const subject = (inputs.subject || {}).value || 'Portfolio contact';
+      const message = (inputs.message || {}).value || '';
       const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
       window.location.href =
         `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       setStatus('Opening your email app…', 'ok');
+      localStorage.removeItem('portfolio_contact_draft');
       return;
     }
 
@@ -640,6 +667,7 @@ function initFormEffects() {
         btn.style.background = 'linear-gradient(135deg, #00FFB2, #00D4FF)';
         setStatus("Thanks! I'll get back to you within 24 hours.", 'ok');
         form.reset();
+        localStorage.removeItem('portfolio_contact_draft');
       } else {
         throw new Error(json.message || 'Submission failed');
       }
