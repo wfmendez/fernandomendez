@@ -428,6 +428,11 @@ section { position: relative; }
   color: var(--text-muted);
   line-height: 1.3;
 }
+.hero-stat-highlight .stat-label .stat-highlight {
+  color: var(--accent-2);
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
+}
 
 .hero-scroll-indicator {
   position: absolute; bottom: 40px; right: 5%;
