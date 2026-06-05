@@ -122,11 +122,11 @@
       </svg>
     </div>
     <ul class="nav-links">
-      <li><a href="#about" data-text="About">About</a></li>
-      <li><a href="#skills" data-text="Skills">Skills</a></li>
+      <li><a href="/about" data-text="About">About</a></li>
+      <li><a href="/about#skills" data-text="Skills">Skills</a></li>
       <li><a href="#projects" data-text="Projects">Projects</a></li>
-      <li><a href="#experience" data-text="Experience">Experience</a></li>
-      <li><a href="#education" data-text="Education">Education</a></li>
+      <li><a href="/about#experience" data-text="Experience">Experience</a></li>
+      <li><a href="/about#education" data-text="Education">Education</a></li>
       <li><a href="#contact" data-text="Contact">Contact</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Hire Me</a>
@@ -138,11 +138,11 @@
   <!-- Mobile menu -->
   <div id="mobile-menu">
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/about#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
+      <li><a href="/about#experience">Experience</a></li>
+      <li><a href="/about#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -187,120 +187,6 @@
     </div>
   </section>
 
-  <!-- ===================== ABOUT ===================== -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-image-wrap">
-            <div class="about-image-placeholder">
-              <canvas id="about-canvas"></canvas>
-            </div>
-            <div class="about-tag tag-1">AI · RAG · LLMs</div>
-            <div class="about-tag tag-2">Next.js + TypeScript</div>
-            <div class="about-tag tag-3">Python · Automation</div>
-          </div>
-        </div>
-        <div class="about-text">
-          <span class="section-label reveal-up">About Me</span>
-          <h2 class="section-title reveal-up">
-            From idea to <span class="gradient-text">AI-powered products</span>
-          </h2>
-          <p class="about-body reveal-up">
-            I'm a Full-Stack Developer pursuing a Bachelor of Software Development at
-            BYU-Idaho. I build production AI applications — LLM-powered chatbots, RAG
-            systems, and content pipelines — turning models like Llama 3.3 and Claude
-            into products people actually use.
-          </p>
-          <p class="about-body reveal-up">
-            I also architect automation ecosystems — n8n, custom AI agents, and API
-            integrations that replace manual ops with self-running infrastructure. My
-            stack centers on Next.js, TypeScript and Python, backed by PostgreSQL and
-            Supabase — and yes, I've shipped on-chain too.
-          </p>
-          <div class="about-signature reveal-up">
-            <svg viewBox="0 0 160 50" fill="none" class="signature-svg">
-              <path d="M10 40 Q30 5 50 30 Q70 55 90 20 Q110 -10 140 35" stroke="url(#sig-grad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <defs>
-                <linearGradient id="sig-grad" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stop-color="#6C63FF"/>
-                  <stop offset="100%" stop-color="#00D4FF"/>
-                </linearGradient>
-              </defs>
-            </svg>
-            <span>Fernando Mendez</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== SKILLS ===================== -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label reveal-up">Expertise</span>
-        <h2 class="section-title reveal-up">The tools I <span class="gradient-text">master</span></h2>
-      </div>
-      <div class="skills-grid">
-        <!-- Frontend -->
-        <div class="skill-card reveal-up" data-delay="0">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#6C63FF" stroke-width="1.5"/><path d="M13 14l-5 6 5 6M27 14l5 6-5 6M22 12l-4 16" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-          <h3>AI &amp; LLM Apps</h3>
-          <p>RAG, chatbots, prompt engineering · Llama 3.3, Claude, Gemini, Groq, Vercel AI SDK</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="93"></div></div>
-        </div>
-        <!-- Backend -->
-        <div class="skill-card reveal-up" data-delay="100">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="4" width="32" height="32" rx="8" stroke="#00D4FF" stroke-width="1.5"/><path d="M12 16h16M12 20h10M12 24h13" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Frontend</h3>
-          <p>React, Next.js, TypeScript, Vite, Tailwind CSS, Figma-to-code</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-        </div>
-        <!-- 3D / Creative -->
-        <div class="skill-card reveal-up" data-delay="200">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><polygon points="20,4 36,12 36,28 20,36 4,28 4,12" stroke="#FF6B9D" stroke-width="1.5"/><polygon points="20,12 28,16 28,24 20,28 12,24 12,16" stroke="#FF6B9D" stroke-width="1" opacity="0.5"/></svg>
-          </div>
-          <h3>Backend &amp; APIs</h3>
-          <p>Node.js, FastAPI, Express, Prisma, PostgreSQL, Supabase, MongoDB</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-        </div>
-        <!-- DevOps -->
-        <div class="skill-card reveal-up" data-delay="300">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="#FFB347" stroke-width="1.5"/><path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="#FFB347" stroke-width="1.8" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Automation &amp; Integration</h3>
-          <p>n8n, AI agents, REST APIs, Airtable, Celery, webhooks</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
-        </div>
-        <!-- Design -->
-        <div class="skill-card reveal-up" data-delay="400">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><path d="M8 32 Q16 8 20 8 Q24 8 32 32" stroke="#A855F7" stroke-width="1.5" fill="none"/><circle cx="20" cy="20" r="3" fill="#A855F7"/></svg>
-          </div>
-          <h3>Web3 &amp; Blockchain</h3>
-          <p>Solidity, Hardhat, Ethers.js, viem, Wagmi</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
-        </div>
-        <!-- AI -->
-        <div class="skill-card reveal-up" data-delay="500">
-          <div class="skill-icon">
-            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="6" fill="none" stroke="#00FFB2" stroke-width="1.5"/><path d="M20 4L20 14M20 26L20 36M4 20L14 20M26 20L36 20M8 8L15 15M25 25L32 32M32 8L25 15M15 25L8 32" stroke="#00FFB2" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Languages &amp; Tools</h3>
-          <p>TypeScript, Python, JavaScript, Solidity · Git, Docker, Vercel · EN/ES bilingual</p>
-          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ===================== PROJECTS ===================== -->
   <section id="projects">
     <div class="container">
@@ -311,13 +197,10 @@
 
       <div class="projects-list">
 
-        <!-- Project 1 -->
-        <article class="project-card reveal-up" data-index="01">
-          <div class="project-meta">
-            <span class="project-number">01</span>
-            <span class="project-year">2026</span>
-          </div>
+        <!-- Project 1 — FPY Academy -->
+        <article class="project-card reveal-up">
           <div class="project-content">
+            <span class="project-index">01 · 2026</span>
             <div class="project-tags">
               <span>Next.js 15</span><span>TypeScript</span><span>Groq</span><span>Llama 3.3</span><span>RAG</span>
             </div>
@@ -331,45 +214,28 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="0"></canvas>
+            <div class="browser-mock" data-mock="fpy">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="browser-url">fpyacademy.com</span>
+              </div>
+              <div class="browser-screen">
+                <!-- SWAP: replace .mock-app with <img src="assets/projects/fpy.png" alt="FPY Academy screenshot"> -->
+                <div class="mock-app">
+                  <span class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1 2.5 2.5 5 2.5s5-1.5 5-2.5v-5"/></svg></span>
+                  <span class="mock-name">FPY Academy</span>
+                  <span class="mock-line w70"></span>
+                  <span class="mock-line w45"></span>
+                </div>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card reveal-up" data-index="02">
-          <div class="project-meta">
-            <span class="project-number">02</span>
-            <span class="project-year">2026</span>
-          </div>
+        <!-- Project 2 — Collab Map -->
+        <article class="project-card reveal-up">
           <div class="project-content">
-            <div class="project-tags">
-              <span>FastAPI</span><span>Celery</span><span>Gemini</span><span>Llama 3.3</span><span>React</span>
-            </div>
-            <h3 class="project-title">ContentFlow — AI Content Pipeline</h3>
-            <p class="project-desc">An open-source SaaS that automates the entire content cycle: it monitors RSS feeds and Reddit every 6 hours, scores trending topics with AI (Gemini 1.5 Flash + Groq Llama 3.3), and drafts LinkedIn posts, blogs, and newsletters for human review. Per-draft AI transparency — tokens, cost, and prompt used — at roughly $0.001 per trend. End-to-end tested with Playwright.</p>
-            <div class="project-links">
-              <a href="https://github.com/wfmendez" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
-                <span>View Code</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="1"></canvas>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card reveal-up" data-index="03">
-          <div class="project-meta">
-            <span class="project-number">03</span>
-            <span class="project-year">2026</span>
-          </div>
-          <div class="project-content">
+            <span class="project-index">02 · 2026</span>
             <div class="project-tags">
               <span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>PostGIS</span><span>Google Maps</span>
             </div>
@@ -380,19 +246,28 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="2"></canvas>
+            <div class="browser-mock" data-mock="collab">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="browser-url">collab map · private</span>
+              </div>
+              <div class="browser-screen">
+                <!-- SWAP: replace .mock-app with <img src="assets/projects/collab.png" alt="Collab Map screenshot"> -->
+                <div class="mock-app">
+                  <span class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.4"/></svg></span>
+                  <span class="mock-name">Collab Map</span>
+                  <span class="mock-line w70"></span>
+                  <span class="mock-line w45"></span>
+                </div>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Project 4 -->
-        <article class="project-card reveal-up" data-index="04">
-          <div class="project-meta">
-            <span class="project-number">04</span>
-            <span class="project-year">2026</span>
-          </div>
+        <!-- Project 3 — STRATA -->
+        <article class="project-card reveal-up">
           <div class="project-content">
+            <span class="project-index">03 · 2026</span>
             <div class="project-tags">
               <span>Next.js 14</span><span>TypeScript</span><span>Prisma</span><span>viem</span><span>SIWE</span>
             </div>
@@ -409,60 +284,55 @@
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="3"></canvas>
+            <div class="browser-mock" data-mock="strata">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="browser-url">strata · socialfi</span>
+              </div>
+              <div class="browser-screen">
+                <!-- SWAP: replace .mock-app with <img src="assets/projects/strata.png" alt="STRATA screenshot"> -->
+                <div class="mock-app">
+                  <span class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 17l6-6 4 4 7-7"/><path d="M15 8h6v6"/></svg></span>
+                  <span class="mock-name">STRATA</span>
+                  <span class="mock-line w70"></span>
+                  <span class="mock-line w45"></span>
+                </div>
+              </div>
             </div>
           </div>
         </article>
 
-        <!-- Project 5 -->
-        <article class="project-card reveal-up" data-index="05">
-          <div class="project-meta">
-            <span class="project-number">05</span>
-            <span class="project-year">2026</span>
-          </div>
+        <!-- Project 4 — ContentFlow -->
+        <article class="project-card reveal-up">
           <div class="project-content">
+            <span class="project-index">04 · 2026</span>
             <div class="project-tags">
-              <span>Vanilla JS</span><span>Groq</span><span>Llama 3.1</span><span>SEO</span><span>PWA</span>
+              <span>FastAPI</span><span>Celery</span><span>Gemini</span><span>Llama 3.3</span><span>React</span>
             </div>
-            <h3 class="project-title">Estaca Caracas 2026 — Event Landing</h3>
-            <p class="project-desc">End-to-end design and build of the official landing page for a regional conference (78% mobile traffic). Features an AI virtual assistant (Groq + Llama 3.1 on Vercel Edge Functions) with a curated knowledge base, plus full technical SEO — Schema.org structured data, geo meta tags, and Core Web Vitals tuning. First week: 186 visitors (+333%) across 5 countries.</p>
+            <h3 class="project-title">ContentFlow — AI Content Pipeline</h3>
+            <p class="project-desc">An open-source SaaS that automates the entire content cycle: it monitors RSS feeds and Reddit every 6 hours, scores trending topics with AI (Gemini 1.5 Flash + Groq Llama 3.3), and drafts LinkedIn posts, blogs, and newsletters for human review. Per-draft AI transparency — tokens, cost, and prompt used — at roughly $0.001 per trend. End-to-end tested with Playwright.</p>
             <div class="project-links">
-              <span class="project-link" style="color:var(--text-muted);cursor:default">Client project · Caracas, Venezuela</span>
-            </div>
-          </div>
-          <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="4"></canvas>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6 -->
-        <article class="project-card reveal-up" data-index="06">
-          <div class="project-meta">
-            <span class="project-number">06</span>
-            <span class="project-year">2025</span>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Cloudinary</span>
-            </div>
-            <h3 class="project-title">Adorable Turtles — Full-Stack App</h3>
-            <p class="project-desc">A full-stack web app with a component-based React frontend and a RESTful API on Node.js, Express, and MongoDB Atlas. Live search turns real-time data into a fluid UX, with Cloudinary image optimization, deployed on Render.</p>
-            <div class="project-links">
-              <a href="https://github.com/wfmendez/adorable-turtles" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
+              <a href="https://github.com/wfmendez" target="_blank" rel="noopener noreferrer" class="project-link magnetic">
                 <span>View Code</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="https://github.com/wfmendez/adorable-turtles" target="_blank" rel="noopener noreferrer" class="project-link-icon magnetic" title="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/></svg>
-              </a>
             </div>
           </div>
           <div class="project-visual">
-            <div class="project-canvas-wrap">
-              <canvas class="project-canvas" data-project="5"></canvas>
+            <div class="browser-mock" data-mock="flow">
+              <div class="browser-bar">
+                <span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span>
+                <span class="browser-url">contentflow · open-source</span>
+              </div>
+              <div class="browser-screen">
+                <!-- SWAP: replace .mock-app with <img src="assets/projects/contentflow.png" alt="ContentFlow screenshot"> -->
+                <div class="mock-app">
+                  <span class="mock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="6" r="2.3"/><circle cx="18" cy="6" r="2.3"/><circle cx="12" cy="18" r="2.3"/><path d="M8 7l8 0M7.5 8l3.5 8M16.5 8l-3.5 8"/></svg></span>
+                  <span class="mock-name">ContentFlow</span>
+                  <span class="mock-line w70"></span>
+                  <span class="mock-line w45"></span>
+                </div>
+              </div>
             </div>
           </div>
         </article>
@@ -474,186 +344,6 @@
           <span>View Complete Archive (All Projects & Jobs)</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== EXPERIENCE ===================== -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label reveal-up">Journey</span>
-        <h2 class="section-title reveal-up">Where I've <span class="gradient-text">worked</span></h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-line"></div>
-
-        <div class="timeline-item reveal-up" data-side="left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Mar 2026 — Present</span>
-            <h3>Founding Member</h3>
-            <span class="timeline-company">DevAccelerator · London, UK · Remote</span>
-            <p>Founding member of a remote talent accelerator for software developers — helping build the program and community that levels up the next generation of engineers.</p>
-            <div class="timeline-skills"><span>Community</span><span>Mentorship</span><span>Startup</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Oct 2025 — Present</span>
-            <h3>Full Stack Developer &amp; Digital Marketing Systems Manager</h3>
-            <span class="timeline-company">Collab Collective Studio · Miami, FL · Remote</span>
-            <p>Architected <strong>Collab Map</strong> — a full-stack field-sales platform (Next.js 14, TypeScript, Supabase + PostGIS, Google Maps) unifying 3,000+ retail stores into one real-time dashboard with mobile GPS check-ins and route optimization. Also built AI-powered marketing automations (n8n, custom AI agents, APIs) and custom Wix/Shopify storefronts.</p>
-            <div class="timeline-skills"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>n8n</span><span>AI Agents</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Jan 2023 — Jan 2026</span>
-            <h3>Lead Automation Architect</h3>
-            <span class="timeline-company">NexDevp · Bogotá, Colombia · Remote</span>
-            <p>Designed scalable, AI-driven automation ecosystems that turned fragmented operations into modular digital solutions — deploying autonomous AI agents and API integrations across CRMs, databases, and e-commerce platforms to eliminate operational friction.</p>
-            <div class="timeline-skills"><span>n8n</span><span>AI Agents</span><span>API Integration</span><span>iPaaS</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Dec 2023 — Dec 2025</span>
-            <h3>Data Analyst &amp; Crypto Market Researcher</h3>
-            <span class="timeline-company">Freelance · Remote</span>
-            <p>Built data-driven trading strategies for crypto markets — analyzing price trends, on-chain metrics, and market sentiment to turn complex datasets into actionable, risk-managed insights.</p>
-            <div class="timeline-skills"><span>DeFi</span><span>Blockchain</span><span>On-chain Analytics</span><span>Data</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Oct 2022 — Dec 2025</span>
-            <h3>Web Developer</h3>
-            <span class="timeline-company">App Abundance · Turmero, Venezuela · Remote</span>
-            <p>My first professional programming role — owning end-to-end development of dynamic, responsive web solutions with a strong focus on UI/UX and back-end integration, while managing client relationships and project handovers.</p>
-            <div class="timeline-skills"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>UI/UX</span><span>GitHub</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="right">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Apr 2024 — Sep 2024</span>
-            <h3>Digital Marketing &amp; Content Manager</h3>
-            <span class="timeline-company">Ferre Newlink · Maracay, Venezuela · Hybrid</span>
-            <p>Led strategy, execution, and optimization of all digital marketing and sales initiatives — managing a small cross-functional team to grow brand visibility, engagement, and sales.</p>
-            <div class="timeline-skills"><span>Marketing Strategy</span><span>Team Leadership</span><span>Content</span></div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal-up" data-side="left">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-period">Jan 2022 — Dec 2027</span>
-            <h3>B.S. in Software Development</h3>
-            <span class="timeline-company">Brigham Young University–Idaho</span>
-            <p>Software engineering principles, OOP, and full-stack design — frontend, backend, and database management. Complemented by 7 industry certifications including Web3 Masterclass and Prompt Engineering Bootcamp (Zero To Mastery).</p>
-            <div class="timeline-skills"><span>OOP</span><span>Algorithms</span><span>Databases</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== EDUCATION & CERTIFICATIONS ===================== -->
-  <section id="education">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label reveal-up">Learning</span>
-        <h2 class="section-title reveal-up">Education &amp; <span class="gradient-text">Certifications</span></h2>
-      </div>
-
-      <div class="edu-grid">
-        <div class="edu-card reveal-up">
-          <span class="edu-period">Jan 2022 — Dec 2027</span>
-          <h3>B.S. in Software Development</h3>
-          <span class="edu-org">Brigham Young University–Idaho · Computer Software Engineering</span>
-          <p>Software engineering principles, OOP, algorithms, and full-stack design across frontend, backend, and database management.</p>
-        </div>
-        <div class="edu-card reveal-up">
-          <span class="edu-period">Jul 2023 — Present</span>
-          <h3>Zero To Mastery Academy</h3>
-          <span class="edu-org">Continuous learning · 11+ courses</span>
-          <p>Self-driven specialization across AI agents (n8n), prompt engineering, React, TypeScript, Solidity &amp; Web3, cybersecurity, and UI/UX design.</p>
-        </div>
-        <div class="edu-card reveal-up">
-          <span class="edu-period">Jan 2021 — Dec 2021</span>
-          <h3>PathwayConnect</h3>
-          <span class="edu-org">BYU-Pathway Worldwide</span>
-          <p>Academic foundations and English proficiency — the on-ramp into the BYU-Idaho software degree.</p>
-        </div>
-        <div class="edu-card reveal-up">
-          <span class="edu-period">Jan 2019 — Apr 2019</span>
-          <h3>Electronics Repair Technician</h3>
-          <span class="edu-org">FUNVAL Colombia</span>
-          <p>Intensive 3-month program in hardware and software diagnosis, maintenance, and repair.</p>
-        </div>
-      </div>
-
-      <div class="cert-block reveal-up">
-        <h3 class="cert-title">Featured certifications</h3>
-        <div class="cert-cloud">
-          <span class="cert-chip">Claude Code 101 <span class="cert-issuer">· Anthropic</span></span>
-          <span class="cert-chip">Claude 101 <span class="cert-issuer">· Anthropic</span></span>
-          <span class="cert-chip">EF SET English — B2 <span class="cert-issuer">· EF SET</span></span>
-          <span class="cert-chip">Build AI Agents with n8n <span class="cert-issuer">· ZTM</span></span>
-          <span class="cert-chip">Prompt Engineering Bootcamp <span class="cert-issuer">· ZTM</span></span>
-          <span class="cert-chip">Web3 Masterclass <span class="cert-issuer">· ZTM</span></span>
-          <span class="cert-chip">Complete React Developer <span class="cert-issuer">· ZTM</span></span>
-          <span class="cert-chip">TypeScript Bootcamp <span class="cert-issuer">· ZTM</span></span>
-          <span class="cert-chip">Cybersecurity for Beginners <span class="cert-issuer">· ZTM</span></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== LEADERSHIP & SERVICE ===================== -->
-  <section id="volunteering">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label reveal-up">Beyond Code</span>
-        <h2 class="section-title reveal-up">Leadership &amp; <span class="gradient-text">Service</span></h2>
-      </div>
-
-      <div class="vol-grid">
-        <div class="vol-card reveal-up">
-          <h3>Online Seminar Teacher (English)</h3>
-          <span class="vol-org">The Church of Jesus Christ of Latter-day Saints</span>
-          <span class="vol-period">Sep 2025 — Present</span>
-          <p>Teach weekly religion classes in English to American teenagers — preparing slides and activities, and leading weekly conversations on an online platform.</p>
-        </div>
-        <div class="vol-card reveal-up">
-          <h3>Volunteer English Instructor</h3>
-          <span class="vol-org">English Connect · The Church of Jesus Christ</span>
-          <span class="vol-period">Feb 2021 — Sep 2025</span>
-          <p>Helped 100+ students of all ages reach English proficiency — with several admitted to English-speaking universities and others securing jobs that required English.</p>
-        </div>
-        <div class="vol-card reveal-up">
-          <h3>Full-time Volunteer Missionary</h3>
-          <span class="vol-org">The Church of Jesus Christ · Caracas, Venezuela</span>
-          <span class="vol-period">Jun 2016 — Aug 2018</span>
-          <p>Led and trained teams of up to 80 volunteers — sharpening leadership, mentorship, and communication through daily goal-setting, planning, and outreach.</p>
-        </div>
-        <div class="vol-card reveal-up">
-          <h3>Administrative &amp; Financial Secretary</h3>
-          <span class="vol-org">The Church of Jesus Christ</span>
-          <span class="vol-period">Aug 2018 — Jan 2020</span>
-          <p>Managed budgets, donations, and records for a 200+ member unit with 100% audit compliance — plus leadership logistics, reporting, and data administration.</p>
-        </div>
       </div>
     </div>
   </section>
