@@ -156,7 +156,7 @@ export const cases: CaseStudy[] = [
     mobile: { src: trayectoMobile, alt: 'Trayecto home page on a phone' },
     facts: [
       { label: 'Dates', value: 'Apr 17 – Sep 29, 2026' },
-      { label: 'Role', value: 'Owner · design and development' },
+      { label: 'Role', value: 'Founder · design and development' },
       { label: 'Stack', value: 'Next.js 15 · Prisma · NextAuth · Groq' },
     ],
     stats: [
@@ -214,7 +214,7 @@ export const cases: CaseStudy[] = [
         date: 'Jun 10',
         kind: 'decision',
         title: 'Getting paid from Venezuela',
-        text: 'Three pricing tiers and access gated by product. Next to card payments, a manual WhatsApp channel with USDT and Pago Móvil; Zelle was dropped because it was not available.',
+        text: 'Three pricing tiers and access gated by product. Card payments do not reach everyone in Venezuela, so a manual WhatsApp channel with local payment methods sits next to them.',
       },
       {
         date: 'Jun 13',

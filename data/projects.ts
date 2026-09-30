@@ -42,7 +42,7 @@ export const clientProjects: Project[] = [
     slug: 'trayecto',
     name: 'Trayecto',
     kind: 'Product',
-    context: 'My own product · trayecto.app · 2026',
+    context: 'Founder · trayecto.app · 2026',
     summary:
       'An AI system that helps people in Latin America build an international remote career. Vision helps them decide where they are going; Ascend handles the job search, from CV and cover letters to applications and interviews. It began as FPY Academy, a learning platform.',
     tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'NextAuth', 'PWA'],
