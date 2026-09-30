@@ -39,6 +39,23 @@ export const clientProjects: Project[] = [
     link: { href: 'https://amarhte.com', label: 'amarhte.com' },
   },
   {
+    slug: 'trayecto',
+    name: 'Trayecto',
+    kind: 'Product',
+    context: 'My own product · trayecto.app · 2026',
+    summary:
+      'An AI system that helps people in Latin America build an international remote career. Vision helps them decide where they are going; Ascend handles the job search, from CV and cover letters to applications and interviews. It began as FPY Academy, a learning platform.',
+    tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'NextAuth', 'PWA'],
+    facts: [
+      { label: 'Commits', value: '447' },
+      { label: 'Test files', value: '49' },
+      { label: 'Languages', value: 'ES · EN · PT' },
+    ],
+    caseSlug: 'trayecto',
+    cover: { icon: 'academy', tone: 'moss' },
+    link: { href: 'https://trayecto.app', label: 'trayecto.app' },
+  },
+  {
     slug: 'collab-map',
     name: 'Collab Map',
     kind: 'Client',
@@ -52,18 +69,6 @@ export const clientProjects: Project[] = [
     ],
     cover: { icon: 'map', tone: 'moss' },
     privateLabel: 'Private · built at Collab Collective Studio',
-  },
-  {
-    slug: 'fpy-academy',
-    name: 'FPY Academy',
-    kind: 'Product',
-    context: 'fpyacademy.com · 2026',
-    summary:
-      'A production LMS where every lesson has a context-aware AI tutor (Llama 3.3 70B via Groq) grounded in the lesson content and streamed with the Vercel AI SDK. Plus a course builder, quiz engine, role-based access and PDF learning plans.',
-    tags: ['Next.js 15', 'TypeScript', 'Groq', 'Llama 3.3', 'RAG'],
-    facts: [{ label: 'Commits', value: '100+' }],
-    cover: { icon: 'academy', tone: 'cobalt' },
-    link: { href: 'https://fpyacademy.com', label: 'fpyacademy.com' },
   },
 ];
 
@@ -116,12 +121,12 @@ export const archiveProjects: ArchiveProject[] = [
   },
   {
     year: '2026',
-    title: 'FPY Academy',
+    title: 'Trayecto',
     description:
-      'A full-stack LMS shipped to production. Includes a context-aware AI tutor grounded in lesson content via a lightweight RAG pattern, streamed token-by-token with Vercel AI SDK, plus a course builder, quiz engine, role-based access, and PDF export.',
-    tags: ['Next.js 15', 'TypeScript', 'Llama 3.3', 'Groq', 'RAG'],
+      'An AI system for building an international remote career from Latin America, formerly FPY Academy. Vision for personal clarity; Ascend for the job search: AI CV builder, cover letters, application board, remote job search and a personality test with its own model.',
+    tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'PWA'],
     highlight: 2,
-    href: 'https://fpyacademy.com',
+    href: 'https://trayecto.app',
     linkKind: 'live',
   },
   {
