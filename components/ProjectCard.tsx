@@ -21,6 +21,12 @@ const mockIcons: Record<MockIcon, ReactNode> = {
       <path d="M15 8h6v6" />
     </>
   ),
+  leaf: (
+    <>
+      <path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z" />
+      <path d="M5 19l8-8" />
+    </>
+  ),
   graph: (
     <>
       <circle cx="6" cy="6" r="2.3" />
