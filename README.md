@@ -59,8 +59,8 @@ Verify the share preview with [opengraph.xyz](https://www.opengraph.xyz) after d
 
 ## 🚀 Deploy
 
-- **Vercel:** import the repo at [vercel.com/new](https://vercel.com/new) — the Next.js preset
-  is detected automatically.
+- **Vercel:** import the repo at [vercel.com/new](https://vercel.com/new). `vercel.json` pins the
+  Next.js framework preset, so older project settings from the static-site days don't apply.
 - **Netlify:** connect the repo; `netlify.toml` sets the build command and Netlify applies
   its Next.js runtime.
 
