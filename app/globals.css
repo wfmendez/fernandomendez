@@ -781,6 +781,7 @@ section { position: relative; }
 .browser-mock[data-mock="collab"] .browser-screen { background: linear-gradient(135deg, #00D4FF, #00FFB2); }
 .browser-mock[data-mock="strata"] .browser-screen { background: linear-gradient(135deg, #FF6B9D, #6C63FF); }
 .browser-mock[data-mock="flow"]   .browser-screen { background: linear-gradient(135deg, #FFB347, #FF6B9D); }
+.browser-mock[data-mock="amarhte"] .browser-screen { background: linear-gradient(135deg, #E07E43, #FFB347); }
 
 /* Frosted "app" skeleton shown until a real screenshot is dropped in */
 .mock-app {

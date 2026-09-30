@@ -1,4 +1,4 @@
-export type MockIcon = 'academy' | 'map' | 'chart' | 'graph';
+export type MockIcon = 'academy' | 'map' | 'chart' | 'graph' | 'leaf';
 
 export type FeaturedProject = {
   index: string;
@@ -15,6 +15,15 @@ export type FeaturedProject = {
 export const featuredProjects: FeaturedProject[] = [
   {
     index: '01 · 2026',
+    title: 'Amarhte — Wellbeing Studio Website',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Cal.com', 'i18n'],
+    description:
+      'A trilingual (ES/EN/PT) website for an integral-wellbeing studio in Madrid, live at amarhte.com. Instead of a price list, it helps visitors find the right one of four support paths: a "how do you feel today?" selector, a guided 60-second breathing pause, and an Ayurvedic dosha test with custom scoring. Enquiries go through a WhatsApp selection cart and a Cal.com calendar that only loads when the visitor asks for it. Every URL from the old site 301-redirects to its new page.',
+    mock: { key: 'amarhte', url: 'amarhte.com', name: 'Amarhte', icon: 'leaf' },
+    link: { href: 'https://amarhte.com', label: 'Visit Live' },
+  },
+  {
+    index: '02 · 2026',
     title: 'FPY Academy — AI Learning Platform',
     tags: ['Next.js 15', 'TypeScript', 'Groq', 'Llama 3.3', 'RAG'],
     description:
@@ -23,7 +32,7 @@ export const featuredProjects: FeaturedProject[] = [
     link: { href: 'https://fpyacademy.com', label: 'Visit Live' },
   },
   {
-    index: '02 · 2026',
+    index: '03 · 2026',
     title: 'Collab Map — Field-Sales Platform',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
     description:
@@ -32,7 +41,7 @@ export const featuredProjects: FeaturedProject[] = [
     privateLabel: 'Private · Collab Collective Studio',
   },
   {
-    index: '03 · 2026',
+    index: '04 · 2026',
     title: 'STRATA — SocialFi Platform',
     tags: ['Next.js 14', 'TypeScript', 'Prisma', 'viem', 'SIWE'],
     description:
@@ -42,7 +51,7 @@ export const featuredProjects: FeaturedProject[] = [
     github: 'https://github.com/wfmendez/strata',
   },
   {
-    index: '04 · 2026',
+    index: '05 · 2026',
     title: 'ContentFlow — AI Content Pipeline',
     tags: ['FastAPI', 'Celery', 'Gemini', 'Llama 3.3', 'React'],
     description:
@@ -64,6 +73,16 @@ export type ArchiveProject = {
 };
 
 export const archiveProjects: ArchiveProject[] = [
+  {
+    year: '2026',
+    title: 'Amarhte',
+    description:
+      'A trilingual (ES/EN/PT) website for a wellbeing studio in Madrid. It guides visitors to the right support path with a feelings selector, a guided breathing pause and an Ayurvedic dosha test. Enquiries go through a WhatsApp cart and an on-demand Cal.com calendar, with 301 redirects from the old site.',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Cal.com', 'i18n'],
+    highlight: 2,
+    href: 'https://amarhte.com',
+    linkKind: 'live',
+  },
   {
     year: '2026',
     title: 'FPY Academy',
