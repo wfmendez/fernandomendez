@@ -10,10 +10,9 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main className="nf-page">
-      <div className="nf-glow" />
       <div className="nf-wrap">
         <div className="nf-code">404</div>
-        <h1>This page drifted off-chain.</h1>
+        <h1>This page isn’t in the notebook.</h1>
         <p>The link you followed doesn&apos;t exist or was moved. Let&apos;s get you back to solid ground.</p>
         <Link className="nf-home" href="/">
           Back to home

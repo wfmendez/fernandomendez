@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import ContactCanvas from '@/components/ContactCanvas';
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
-import HeroCanvas from '@/components/HeroCanvas';
+import HandNote from '@/components/HandNote';
 import JsonLd from '@/components/JsonLd';
 import Navbar from '@/components/Navbar';
-import ProjectCard from '@/components/ProjectCard';
+import ProjectChapter from '@/components/ProjectChapter';
 import { ArrowIcon, GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from '@/components/icons';
-import { featuredProjects } from '@/data/projects';
+import { clientProjects, sideProjects } from '@/data/projects';
 import {
   EMAIL, GITHUB_URL, LINKEDIN_URL, PHONE_DISPLAY, SITE_TITLE, SITE_URL, WHATSAPP_URL,
   personJsonLd, type NavItem,
@@ -59,67 +58,99 @@ export default function HomePage() {
       <Navbar items={navItems} ctaHref="#contact" />
 
       {/* ===================== HERO ===================== */}
-      <section id="hero">
-        <HeroCanvas />
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-badge">
-              <span className="badge-dot"></span>
+      <section id="hero" className="hero">
+        <div className="container hero-grid">
+          <div className="hero-copy">
+            <p className="kicker">
+              <span className="status-dot" aria-hidden="true"></span>
               Available for new projects
-            </div>
+            </p>
             <h1 className="hero-title">
-              <span className="title-line" data-text="Fernando">Fernando</span>
-              <span className="title-line gradient-text" data-text="Mendez">Mendez</span>
-              <span className="title-line" data-text="— Builds with AI.">— Builds with AI.</span>
+              Fernando Mendez
+              <span className="hero-title-line">
+                builds <mark className="marker">with AI.</mark>
+              </span>
             </h1>
             <p className="hero-subtitle">
-              Full-Stack Developer specialised in <em>AI-powered apps</em> — building LLM chatbots, RAG
-              systems &amp; automation pipelines with React, TypeScript &amp; Next.js, from Venezuela.
+              Full-stack developer specialised in AI-powered apps: LLM chatbots, RAG systems and automation
+              pipelines with React, TypeScript and Next.js. Based in Venezuela, working with clients anywhere.
             </p>
-            <div className="hero-stat-highlight">
-              <span className="stat-num" data-target="4">0</span>
-              <span className="stat-label">
-                <span className="stat-highlight">Years</span>
-                <br />
-                of Experience
-              </span>
-            </div>
             <div className="hero-actions">
-              <a href="#projects" className="btn btn-primary magnetic">
-                <span>View Work</span>
+              <a href="#projects" className="btn btn-primary">
+                <span>See the work</span>
                 <ArrowIcon />
               </a>
-              <a href="#contact" className="btn btn-ghost magnetic">
-                <span>Let&apos;s Talk</span>
+              <a href="#contact" className="btn btn-ghost">
+                <span>Let&apos;s talk</span>
               </a>
             </div>
           </div>
-        </div>
-        <div className="hero-scroll-indicator">
-          <span>Scroll</span>
-          <div className="scroll-line"></div>
+
+          <aside className="hero-card" aria-label="Experience">
+            <span className="hero-card-label">Field notes</span>
+            <p className="hero-stat">
+              <span className="stat-num" data-target="4">0</span>
+              <span className="stat-unit">years shipping software</span>
+            </p>
+            <ul className="hero-card-list">
+              <li><span>Now</span> Full-stack at Collab Collective Studio</li>
+              <li><span>Stack</span> Next.js · TypeScript · Python</li>
+              <li><span>Studying</span> B.S. Software Development, BYU-Idaho</li>
+            </ul>
+            <HandNote point="left" className="hero-card-note">and counting</HandNote>
+          </aside>
         </div>
       </section>
 
       {/* ===================== PROJECTS ===================== */}
-      <section id="projects">
+      <section id="projects" className="section">
         <div className="container">
-          <div className="section-header">
-            <span className="section-label reveal-up">Work</span>
-            <h2 className="section-title reveal-up">
-              Selected <span className="gradient-text">Projects</span>
+          <header className="section-head">
+            <span className="section-label">Client work</span>
+            <h2 className="section-title">
+              Every project, <mark className="marker">logged</mark> from kickoff to launch.
             </h2>
-          </div>
+            <p className="section-intro">
+              What I built, for whom, and the decisions along the way. Client projects come with a dated
+              logbook of how they were made.
+            </p>
+          </header>
 
-          <div className="projects-list">
-            {featuredProjects.map(project => (
-              <ProjectCard key={project.mock.key} project={project} />
+          <div className="chapters">
+            {clientProjects.map(project => (
+              <ProjectChapter key={project.slug} project={project} />
             ))}
           </div>
 
+          <div className="side-projects reveal-up">
+            <h3 className="section-label">Side projects</h3>
+            <ul>
+              {sideProjects.map(project => (
+                <li key={project.slug} className="side-row">
+                  <div className="side-name">
+                    <strong>{project.name}</strong>
+                    <span>{project.context}</span>
+                  </div>
+                  <p>{project.summary}</p>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="icon-link"
+                      aria-label={`${project.name} on GitHub`}
+                    >
+                      <GitHubIcon />
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <div className="projects-cta reveal-up">
-            <Link href="/archive" className="btn btn-ghost magnetic">
-              <span>View Complete Archive (All Projects &amp; Jobs)</span>
+            <Link href="/archive" className="btn btn-ghost">
+              <span>Full archive of projects and roles</span>
               <ArrowIcon />
             </Link>
           </div>
@@ -127,20 +158,17 @@ export default function HomePage() {
       </section>
 
       {/* ===================== CONTACT ===================== */}
-      <section id="contact">
-        <ContactCanvas />
+      <section id="contact" className="section contact">
         <div className="container">
           <div className="contact-inner">
             <div className="contact-text">
               <span className="section-label reveal-up">Contact</span>
               <h2 className="section-title reveal-up">
-                Let&apos;s build
-                <br />
-                something <span className="gradient-text">intelligent.</span>
+                Let&apos;s start the <mark className="marker">next entry.</mark>
               </h2>
               <p className="reveal-up">
-                Open to freelance work, remote full-time roles, and AI &amp; automation projects. Reach out — I
-                respond within 24 hours.
+                Open to freelance work, remote full-time roles, and AI &amp; automation projects. I reply within
+                24 hours.
               </p>
               <div className="contact-links reveal-up">
                 <a href={`mailto:${EMAIL}`} className="contact-link">

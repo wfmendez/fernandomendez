@@ -46,7 +46,7 @@ export default function Navbar({ items, ctaHref, logoHref }: Props) {
   }, [open]);
 
   const close = () => setOpen(false);
-  const logo = <Logo size={36} gradientId="nav-grad" />;
+  const logo = <Logo size={34} />;
 
   return (
     <>

@@ -1,27 +1,40 @@
 # Fernando Mendez — Portfolio
 
-A developer portfolio built with **Next.js (App Router) + TypeScript**, with Three.js WebGL
-scenes, a custom cursor, scroll animations, and a working contact form.
+A developer portfolio built with **Next.js (App Router) + TypeScript**. The design is a working
+notebook ("Cuaderno"): ruled paper, ink, a red margin line and handwritten notes. Client projects
+are shown as large chapters, each with a dated logbook of how it was built.
 
 ```
 ├── app/
-│   ├── layout.tsx         # Root layout: fonts, shared metadata, preloader + cursor shell
+│   ├── layout.tsx         # Root layout: fonts, shared metadata, page effects
 │   ├── globals.css        # Site-wide styles (responsive, reduced-motion, touch handling)
 │   ├── page.tsx           # Home: hero, featured projects, contact
 │   ├── about/page.tsx     # About: bio, skills, experience, education, service
 │   ├── archive/           # Full project + work history tables (page.tsx, archive.css)
+│   ├── work/[slug]/       # Project logbooks (case studies) generated from data/cases.ts
 │   ├── not-found.tsx      # Branded 404
 │   ├── robots.ts          # /robots.txt
 │   └── sitemap.ts         # /sitemap.xml
-├── components/            # Navbar, Footer, ContactForm, WebGL canvases, SiteShell, icons…
-├── data/                  # Page content: projects, experience, skills, site constants
-├── lib/                   # Animation helpers, page effects, Three.js setup
+├── components/            # Navbar, Footer, ProjectChapter, HandNote, ContactForm, icons…
+├── data/                  # Page content: projects, case logbooks, experience, skills, site constants
+├── assets/projects/       # Project screenshots (imported by data/cases.ts)
+├── lib/                   # Scroll effects
 ├── public/assets/         # Favicon + social share image
 └── next.config.ts         # Security/cache headers and redirects from the old *.html URLs
 ```
 
-Most content edits happen in `data/` — add a project to `data/projects.ts` or a role to
+Most content edits happen in `data/`: add a project to `data/projects.ts` or a role to
 `data/experience.ts` and the pages pick it up.
+
+### Adding a project logbook
+
+1. Add screenshots to `assets/projects/`.
+2. Add an entry to `data/cases.ts`: facts, stats, the week index and the dated log entries.
+   A good first draft comes from the project's history:
+   `git log --reverse --date=short --format='%ad %s'`. Keep the entries that tell a decision or a
+   visible change, and rewrite them in plain language.
+3. Set `caseSlug` on the project in `data/projects.ts`. The home page chapter then uses the
+   screenshot and links to `/work/<slug>`.
 
 ---
 
@@ -70,13 +83,11 @@ Security and cache headers live in `next.config.ts`, so they apply on any host.
 
 ## 🛠️ Tech
 
-Next.js · React · TypeScript · [Three.js](https://threejs.org) (loaded on demand) ·
-Google Fonts (Inter, Syne) · [Web3Forms](https://web3forms.com) for the contact form.
+Next.js · React · TypeScript · Google Fonts (Bricolage Grotesque, Instrument Sans, JetBrains Mono,
+Caveat) · [Web3Forms](https://web3forms.com) for the contact form.
 
 ## ♿ Accessibility & performance notes
 
-- Respects `prefers-reduced-motion` — disables WebGL scenes, the custom cursor, and animations.
-- Custom cursor and magnetic/tilt effects are disabled on touch devices.
-- WebGL scenes pause when off-screen or when the browser tab is hidden, and free their GPU
-  resources when you navigate away.
+- Respects `prefers-reduced-motion`: reveals, counters and smooth scrolling are turned off.
+- Screenshots use `next/image` with blur placeholders and responsive sizes.
 - Decorative SVGs are hidden from screen readers; keyboard focus is visible throughout.

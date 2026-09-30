@@ -9,24 +9,7 @@
   z-index: 10;
 }
 
-.back-home {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  transition: color 0.3s, transform 0.3s var(--ease-spring);
-}
-.back-home:hover {
-  color: var(--text);
-  transform: translateX(-4px);
-}
-.back-home svg {
-  width: 16px;
-  height: 16px;
-  transform: rotate(180deg);
-}
+.archive-header .nav-logo { margin: 0; }
 
 .archive-hero {
   padding: 80px 5% 40px;
@@ -81,8 +64,7 @@
   margin-bottom: 60px;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: rgba(15, 15, 26, 0.4);
-  backdrop-filter: blur(10px);
+  background: var(--card);
 }
 
 .archive-table {
@@ -105,7 +87,7 @@
   text-transform: uppercase;
   font-size: 0.75rem;
   letter-spacing: 0.08em;
-  background: rgba(22, 22, 42, 0.3);
+  background: var(--paper-2);
 }
 
 .archive-table tr:last-child td {
@@ -116,7 +98,7 @@
   transition: background-color 0.3s;
 }
 .archive-table tr:hover {
-  background-color: rgba(108, 99, 255, 0.03);
+  background-color: var(--highlight);
 }
 
 .col-year {
@@ -139,7 +121,7 @@
   transition: color 0.3s;
 }
 .col-title a:hover {
-  color: var(--accent-2);
+  color: var(--cobalt);
 }
 .col-title a svg {
   width: 14px;
@@ -168,9 +150,9 @@
 
 .archive-tag {
   padding: 4px 10px;
-  background: rgba(22, 22, 42, 0.6);
+  background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: 100px;
+  border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 500;
   color: var(--text-muted);
@@ -178,8 +160,8 @@
 }
 
 .archive-tag.highlight {
-  background: rgba(108, 99, 255, 0.08);
-  border-color: rgba(108, 99, 255, 0.2);
+  background: var(--highlight);
+  border-color: color-mix(in srgb, var(--cobalt) 35%, transparent);
   color: var(--accent-1);
 }
 
@@ -205,8 +187,8 @@
   transition: color 0.3s, background 0.3s, transform 0.3s var(--ease-spring);
 }
 .archive-link:hover {
-  color: var(--text);
-  background: var(--accent-1);
+  color: var(--card);
+  background: var(--ink);
   transform: scale(1.1);
 }
 .archive-link svg {

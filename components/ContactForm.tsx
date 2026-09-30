@@ -91,7 +91,7 @@ export default function ContactForm() {
   };
 
   return (
-    <form className="contact-form glass-card reveal-up" id="contact-form" onSubmit={onSubmit}>
+    <form className="contact-form reveal-up" id="contact-form" onSubmit={onSubmit}>
       <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
       <input type="hidden" name="subject" value="New message from your portfolio" />
       <input type="hidden" name="from_name" value="Portfolio Contact" />
@@ -120,9 +120,9 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="btn btn-primary magnetic form-submit"
+        className="btn btn-primary form-submit"
         disabled={busy}
-        style={sent ? { background: 'linear-gradient(135deg, #00FFB2, #00D4FF)' } : undefined}
+        style={sent ? { background: 'var(--moss)' } : undefined}
       >
         <span>{buttonLabel}</span>
         <SendIcon />
