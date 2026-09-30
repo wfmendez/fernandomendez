@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { ArrowIcon, ExternalIcon } from './icons';
+import { ArrowIcon, ExternalIcon, GitHubIcon } from './icons';
 import { getCase } from '@/data/cases';
 import type { CoverIcon, Project } from '@/data/projects';
 
@@ -71,6 +71,7 @@ export default function ProjectChapter({ project }: { project: Project }) {
       <div className="chapter-body">
         <p className="chapter-meta">
           <span className="stamp">{project.kind}</span>
+          {project.badge && <span className="stamp stamp-new">{project.badge}</span>}
           {project.context}
         </p>
         <h3 className="chapter-title">{project.name}</h3>
@@ -102,6 +103,17 @@ export default function ProjectChapter({ project }: { project: Project }) {
             <a href={project.link.href} target="_blank" rel="noopener noreferrer" className="link-ext">
               {project.link.label}
               <ExternalIcon />
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="icon-link"
+              aria-label={`${project.name} on GitHub`}
+            >
+              <GitHubIcon />
             </a>
           )}
           {project.privateLabel && <span className="private-note">{project.privateLabel}</span>}

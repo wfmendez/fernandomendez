@@ -106,13 +106,13 @@ export default function HomePage() {
       <section id="projects" className="section">
         <div className="container">
           <header className="section-head">
-            <span className="section-label">Client work</span>
+            <span className="section-label">Selected work</span>
             <h2 className="section-title">
               Every project, <mark className="marker">logged</mark> from kickoff to launch.
             </h2>
             <p className="section-intro">
-              What I built, for whom, and the decisions along the way. Client projects come with a dated
-              logbook of how they were made.
+              What I built, for whom, and the decisions along the way. Client projects and my own products
+              come with a dated logbook of how they were made.
             </p>
           </header>
 
