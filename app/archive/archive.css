@@ -1,0 +1,287 @@
+/* Archive page layout: header, hero and responsive tables. */
+.archive-header {
+  padding: 40px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+
+.back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.3s, transform 0.3s var(--ease-spring);
+}
+.back-home:hover {
+  color: var(--text);
+  transform: translateX(-4px);
+}
+.back-home svg {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+.archive-hero {
+  padding: 80px 5% 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.archive-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.archive-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.archive-section {
+  padding: 40px 5% 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.archive-section-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.archive-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Tabular Layout */
+.archive-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 60px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: rgba(15, 15, 26, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.archive-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.archive-table th, 
+.archive-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.archive-table th {
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  background: rgba(22, 22, 42, 0.3);
+}
+
+.archive-table tr:last-child td {
+  border-bottom: none;
+}
+
+.archive-table tr {
+  transition: background-color 0.3s;
+}
+.archive-table tr:hover {
+  background-color: rgba(108, 99, 255, 0.03);
+}
+
+.col-year {
+  width: 80px;
+  font-weight: 500;
+  color: var(--accent-1);
+}
+
+.col-title {
+  width: 220px;
+  font-weight: 700;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.col-title a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s;
+}
+.col-title a:hover {
+  color: var(--accent-2);
+}
+.col-title a svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--ease-spring);
+}
+.col-title a:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.col-desc {
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-size: 0.85rem;
+}
+
+.col-tags {
+  width: 320px;
+}
+
+.archive-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.archive-tag {
+  padding: 4px 10px;
+  background: rgba(22, 22, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.archive-tag.highlight {
+  background: rgba(108, 99, 255, 0.08);
+  border-color: rgba(108, 99, 255, 0.2);
+  color: var(--accent-1);
+}
+
+.col-links {
+  width: 120px;
+}
+
+.archive-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.archive-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  color: var(--text-muted);
+  transition: color 0.3s, background 0.3s, transform 0.3s var(--ease-spring);
+}
+.archive-link:hover {
+  color: var(--text);
+  background: var(--accent-1);
+  transform: scale(1.1);
+}
+.archive-link svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Experience Specific Column Widths */
+.col-period {
+  width: 180px;
+  font-weight: 600;
+  color: var(--accent-1);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.col-role {
+  width: 250px;
+  font-size: 0.95rem;
+}
+
+.company-name {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+/* Responsive Mobile Layout for tables */
+@media (max-width: 768px) {
+  .archive-table, 
+  .archive-table tbody, 
+  .archive-table tr, 
+  .archive-table td, 
+  .archive-table th {
+    display: block;
+  }
+  
+  .archive-table thead {
+    display: none;
+  }
+  
+  .archive-table tr {
+    padding: 24px 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .archive-table td {
+    padding: 6px 0;
+    border: none;
+    width: 100% !important;
+  }
+  
+  .col-year {
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+  
+  .col-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .col-desc {
+    margin-bottom: 12px;
+  }
+  
+  .col-tags {
+    margin-bottom: 12px;
+  }
+  
+  .col-period {
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+  }
+}
