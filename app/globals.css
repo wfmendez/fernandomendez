@@ -206,6 +206,8 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); text-wrap:
   transform: rotate(-2deg);
 }
 
+.stamp-new { color: var(--cobalt); transform: rotate(3deg); }
+
 /* A screenshot "taped" onto the page */
 .taped {
   position: relative;
@@ -415,6 +417,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); text-wrap:
 }
 .chapter:nth-child(2) { top: 112px; }
 .chapter:nth-child(3) { top: 128px; }
+.chapter:nth-child(4) { top: 144px; }
 
 .chapter-cover {
   position: relative;

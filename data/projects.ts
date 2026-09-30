@@ -13,6 +13,8 @@ export type Project = {
   facts?: { label: string; value: string }[];
   // Slug of the logbook page under /work, when one exists.
   caseSlug?: string;
+  // Optional stamp shown next to the kind, e.g. "New".
+  badge?: string;
   // Typographic cover used when there is no screenshot.
   cover: { icon: CoverIcon; tone: 'cobalt' | 'signal' | 'moss' | 'ink' };
   link?: { href: string; label: string };
@@ -21,6 +23,25 @@ export type Project = {
 };
 
 export const clientProjects: Project[] = [
+  {
+    slug: 'cil',
+    name: 'Cíl',
+    kind: 'Product',
+    badge: 'New',
+    context: 'Own product · Android, Windows and web · 2026',
+    summary:
+      'A study app for the Cambridge B1, B2 and C1 exams. Every exercise explains why the answer is right, mock tests mark you part by part, and an optional AI review comments on your writing. No account: everything stays on the device and works offline.',
+    tags: ['Flutter', 'Dart', 'Vercel Functions', 'Groq', 'Anthropic'],
+    facts: [
+      { label: 'Levels', value: 'B1 · B2 · C1' },
+      { label: 'Platforms', value: 'Android · Windows · Web' },
+      { label: 'Built in', value: '2 days' },
+    ],
+    caseSlug: 'cil',
+    cover: { icon: 'academy', tone: 'cobalt' },
+    link: { href: 'https://cambridge-helper-cumorah.vercel.app', label: 'Open the web app' },
+    github: 'https://github.com/wfmendez/cambridge-helper-cumorah',
+  },
   {
     slug: 'amarhte',
     name: 'Amarhte',
@@ -109,6 +130,16 @@ export type ArchiveProject = {
 };
 
 export const archiveProjects: ArchiveProject[] = [
+  {
+    year: '2026',
+    title: 'Cíl',
+    description:
+      'A study app for the Cambridge B1, B2 and C1 exams on Android, Windows and the web. Explained practice, original mock papers marked part by part, writing tasks with optional AI reviews (Groq, with Anthropic as fallback) and no accounts: everything stays on the device.',
+    tags: ['Flutter', 'Dart', 'Vercel Functions', 'Groq', 'Anthropic'],
+    highlight: 2,
+    href: 'https://cambridge-helper-cumorah.vercel.app',
+    linkKind: 'live',
+  },
   {
     year: '2026',
     title: 'Amarhte',

@@ -75,10 +75,18 @@ export default async function CaseStudyPage({ params }: Params) {
             <h1 className="case-title">{study.name}</h1>
             <p className="case-tagline">&ldquo;{study.tagline}&rdquo;</p>
             <p className="case-intro">{study.intro}</p>
-            <a href={study.url} target="_blank" rel="noopener noreferrer" className="link-ext">
-              {study.url.replace('https://', '')}
-              <ExternalIcon />
-            </a>
+            <div className="case-links">
+              <a href={study.url} target="_blank" rel="noopener noreferrer" className="link-ext">
+                {study.url.replace('https://', '')}
+                <ExternalIcon />
+              </a>
+              {study.links?.map(l => (
+                <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="link-ext">
+                  {l.label}
+                  <ExternalIcon />
+                </a>
+              ))}
+            </div>
           </div>
           <figure className="taped case-cover">
             <Image src={study.cover.src} alt={study.cover.alt} priority sizes="(max-width: 860px) 92vw, 620px" placeholder="blur" />

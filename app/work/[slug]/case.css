@@ -13,12 +13,13 @@
 .case-title {
   font-size: clamp(3.4rem, 9vw, 7rem);
   font-weight: 800; line-height: 0.9;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
   font-variation-settings: 'opsz' 96;
 }
 .case-tagline { font: 700 clamp(1.6rem, 3vw, 2.1rem)/1.1 var(--font-hand); color: var(--signal); }
 .case-intro { color: var(--ink-2); max-width: 50ch; font-size: 1.1rem; }
 .case-cover { transform: rotate(1.4deg); }
+.case-links { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 
 .case-sheet {
   display: grid;
