@@ -1,4 +1,4 @@
-/* 404 page: centered message over a soft accent glow. */
+/* 404 page: a centered message on the ruled paper. */
 .nf-page {
   display: flex; align-items: center; justify-content: center;
   min-height: 100vh; text-align: center; padding: 24px; overflow: hidden;
@@ -7,21 +7,16 @@
 .nf-code {
   font-size: clamp(6rem, 22vw, 11rem); font-weight: 900; line-height: 1;
   letter-spacing: -.04em;
-  background: var(--gradient);
-  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  color: var(--ink);
+  font-family: var(--font-display);
 }
 .nf-page h1 { font-size: clamp(1.3rem, 4vw, 1.8rem); font-weight: 700; margin: 8px 0 14px; }
 .nf-page p { color: var(--text-muted); line-height: 1.7; margin-bottom: 32px; }
 .nf-home {
   display: inline-flex; align-items: center; gap: 10px;
-  padding: 14px 28px; border-radius: 100px; font-weight: 600; font-size: .9rem;
-  color: #fff;
-  background: var(--gradient);
-  transition: transform .3s var(--ease-spring), box-shadow .3s;
+  padding: 14px 24px; border-radius: var(--radius-sm); font-weight: 600; font-size: .9rem;
+  color: var(--paper);
+  background: var(--ink);
+  transition: transform .2s var(--ease-out), box-shadow .2s var(--ease-out);
 }
-.nf-home:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(108,99,255,.5); }
-.nf-glow {
-  position: fixed; width: 600px; height: 600px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(108,99,255,.18), transparent 70%);
-  top: -10%; right: -10%; pointer-events: none; z-index: 0;
-}
+.nf-home:hover { transform: translate(-2px, -2px); box-shadow: 3px 3px 0 var(--cobalt); }

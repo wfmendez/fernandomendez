@@ -1,63 +1,94 @@
-export type MockIcon = 'academy' | 'map' | 'chart' | 'graph' | 'leaf';
+export type CoverIcon = 'academy' | 'map' | 'chart' | 'graph' | 'leaf';
 
-export type FeaturedProject = {
-  index: string;
-  title: string;
+// A project shown on the home page. Client and product work gets a large
+// "chapter"; side projects get a compact row.
+export type Project = {
+  slug: string;
+  name: string;
+  kind: 'Client' | 'Product' | 'Side project';
+  // Short context line, e.g. who it was for and when.
+  context: string;
+  summary: string;
   tags: string[];
-  description: string;
-  mock: { key: string; url: string; name: string; icon: MockIcon };
-  // Primary call-to-action; omitted for private work.
+  facts?: { label: string; value: string }[];
+  // Slug of the logbook page under /work, when one exists.
+  caseSlug?: string;
+  // Typographic cover used when there is no screenshot.
+  cover: { icon: CoverIcon; tone: 'cobalt' | 'signal' | 'moss' | 'ink' };
   link?: { href: string; label: string };
   github?: string;
   privateLabel?: string;
 };
 
-export const featuredProjects: FeaturedProject[] = [
+export const clientProjects: Project[] = [
   {
-    index: '01 · 2026',
-    title: 'Amarhte — Wellbeing Studio Website',
-    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Cal.com', 'i18n'],
-    description:
-      'A trilingual (ES/EN/PT) website for an integral-wellbeing studio in Madrid, live at amarhte.com. Instead of a price list, it helps visitors find the right one of four support paths: a "how do you feel today?" selector, a guided 60-second breathing pause, and an Ayurvedic dosha test with custom scoring. Enquiries go through a WhatsApp selection cart and a Cal.com calendar that only loads when the visitor asks for it. Every URL from the old site 301-redirects to its new page.',
-    mock: { key: 'amarhte', url: 'amarhte.com', name: 'Amarhte', icon: 'leaf' },
-    link: { href: 'https://amarhte.com', label: 'Visit Live' },
+    slug: 'amarhte',
+    name: 'Amarhte',
+    kind: 'Client',
+    context: 'Wellbeing studio · Madrid · 2026',
+    summary:
+      'A trilingual website for an integral-wellbeing studio. Instead of a price list, it helps each visitor find their path: a feelings selector, a guided breathing pause and an Ayurvedic dosha test, each ending in a WhatsApp conversation or a booking on Cal.com.',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Cal.com'],
+    facts: [
+      { label: 'Built in', value: '22 days' },
+      { label: 'Commits', value: '98' },
+      { label: 'Languages', value: 'ES · EN · PT' },
+    ],
+    caseSlug: 'amarhte',
+    cover: { icon: 'leaf', tone: 'signal' },
+    link: { href: 'https://amarhte.com', label: 'amarhte.com' },
   },
   {
-    index: '02 · 2026',
-    title: 'FPY Academy — AI Learning Platform',
-    tags: ['Next.js 15', 'TypeScript', 'Groq', 'Llama 3.3', 'RAG'],
-    description:
-      'A full-stack LMS shipped to production at fpyacademy.com. Every lesson includes a context-aware AI tutor (Llama 3.3 70B via Groq) that grounds its answers in the live lesson content — a lightweight RAG pattern, streamed token-by-token with the Vercel AI SDK. Plus a course builder, quiz engine, role-based access, and PDF-exportable learning plans. 100+ commits.',
-    mock: { key: 'fpy', url: 'fpyacademy.com', name: 'FPY Academy', icon: 'academy' },
-    link: { href: 'https://fpyacademy.com', label: 'Visit Live' },
-  },
-  {
-    index: '03 · 2026',
-    title: 'Collab Map — Field-Sales Platform',
+    slug: 'collab-map',
+    name: 'Collab Map',
+    kind: 'Client',
+    context: 'Collab Collective Studio · Miami · 2026',
+    summary:
+      'A field-sales platform coordinating reps across 3,000+ retail stores. Three Airtable bases and Supabase (PostGIS) meet in one real-time map with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins and in-app navigation.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
-    description:
-      'An end-to-end operations platform coordinating field reps across 3,000+ retail stores. Unifies three Airtable bases and Supabase (PostGIS) into one real-time map dashboard with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins, and in-app turn-by-turn navigation. Result: reps log visits 4× faster. Built at Collab Collective Studio.',
-    mock: { key: 'collab', url: 'collab map · private', name: 'Collab Map', icon: 'map' },
-    privateLabel: 'Private · Collab Collective Studio',
+    facts: [
+      { label: 'Stores', value: '3,000+' },
+      { label: 'Visit logging', value: '4× faster' },
+    ],
+    cover: { icon: 'map', tone: 'moss' },
+    privateLabel: 'Private · built at Collab Collective Studio',
   },
   {
-    index: '04 · 2026',
-    title: 'STRATA — SocialFi Platform',
-    tags: ['Next.js 14', 'TypeScript', 'Prisma', 'viem', 'SIWE'],
-    description:
-      'A "Twitter for on-chain real estate" where investors post tokenized property deals and earn DeFi yield. Engineered for scale and security: Fan-Out-on-Write feeds (500-post materialized timelines), Sign-In with Ethereum with replay protection, HMAC-signed sessions, CSRF middleware, and CSP hardening — all covered by 29 Vitest tests.',
-    mock: { key: 'strata', url: 'strata · socialfi', name: 'STRATA', icon: 'chart' },
-    link: { href: 'https://github.com/wfmendez/strata', label: 'View Code' },
+    slug: 'fpy-academy',
+    name: 'FPY Academy',
+    kind: 'Product',
+    context: 'fpyacademy.com · 2026',
+    summary:
+      'A production LMS where every lesson has a context-aware AI tutor (Llama 3.3 70B via Groq) grounded in the lesson content and streamed with the Vercel AI SDK. Plus a course builder, quiz engine, role-based access and PDF learning plans.',
+    tags: ['Next.js 15', 'TypeScript', 'Groq', 'Llama 3.3', 'RAG'],
+    facts: [{ label: 'Commits', value: '100+' }],
+    cover: { icon: 'academy', tone: 'cobalt' },
+    link: { href: 'https://fpyacademy.com', label: 'fpyacademy.com' },
+  },
+];
+
+export const sideProjects: Project[] = [
+  {
+    slug: 'strata',
+    name: 'STRATA',
+    kind: 'Side project',
+    context: 'SocialFi · 2026',
+    summary:
+      'A "Twitter for on-chain real estate": Fan-Out-on-Write feeds, Sign-In with Ethereum with replay protection, HMAC sessions and CSP hardening, covered by 29 Vitest tests.',
+    tags: ['Next.js 14', 'Prisma', 'viem', 'SIWE'],
+    cover: { icon: 'chart', tone: 'ink' },
     github: 'https://github.com/wfmendez/strata',
   },
   {
-    index: '05 · 2026',
-    title: 'ContentFlow — AI Content Pipeline',
-    tags: ['FastAPI', 'Celery', 'Gemini', 'Llama 3.3', 'React'],
-    description:
-      'An open-source SaaS that automates the entire content cycle: it monitors RSS feeds and Reddit every 6 hours, scores trending topics with AI (Gemini 1.5 Flash + Groq Llama 3.3), and drafts LinkedIn posts, blogs, and newsletters for human review. Per-draft AI transparency — tokens, cost, and prompt used — at roughly $0.001 per trend. End-to-end tested with Playwright.',
-    mock: { key: 'flow', url: 'contentflow · open-source', name: 'ContentFlow', icon: 'graph' },
-    link: { href: 'https://github.com/wfmendez', label: 'View Code' },
+    slug: 'contentflow',
+    name: 'ContentFlow',
+    kind: 'Side project',
+    context: 'Open-source AI pipeline · 2026',
+    summary:
+      'Monitors RSS and Reddit, scores trending topics with Gemini and Llama 3.3, and drafts posts for human review, with per-draft token and cost transparency.',
+    tags: ['FastAPI', 'Celery', 'Gemini', 'React'],
+    cover: { icon: 'graph', tone: 'ink' },
+    github: 'https://github.com/wfmendez',
   },
 ];
 
@@ -77,7 +108,7 @@ export const archiveProjects: ArchiveProject[] = [
     year: '2026',
     title: 'Amarhte',
     description:
-      'A trilingual (ES/EN/PT) website for a wellbeing studio in Madrid. It guides visitors to the right support path with a feelings selector, a guided breathing pause and an Ayurvedic dosha test. Enquiries go through a WhatsApp cart and an on-demand Cal.com calendar, with 301 redirects from the old site.',
+      'A trilingual (ES/EN/PT) website for a wellbeing studio in Madrid. It guides visitors to the right support path with a feelings selector, a guided breathing pause and an Ayurvedic dosha test. Visitors pick a treatment and continue on WhatsApp or book through Cal.com, with 301 redirects from the old site.',
     tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Cal.com', 'i18n'],
     highlight: 2,
     href: 'https://amarhte.com',

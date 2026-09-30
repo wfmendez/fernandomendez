@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import AboutCanvas from '@/components/AboutCanvas';
 import Footer from '@/components/Footer';
+import HandNote from '@/components/HandNote';
 import JsonLd from '@/components/JsonLd';
 import Navbar from '@/components/Navbar';
 import { certifications, education, skills, volunteering, type SkillIcon } from '@/data/about';
@@ -38,40 +38,40 @@ const navItems: NavItem[] = [
 const skillIcons: Record<SkillIcon, ReactNode> = {
   ai: (
     <svg viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="18" stroke="#6C63FF" strokeWidth="1.5" />
-      <path d="M13 14l-5 6 5 6M27 14l5 6-5 6M22 12l-4 16" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M13 14l-5 6 5 6M27 14l5 6-5 6M22 12l-4 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   ),
   frontend: (
     <svg viewBox="0 0 40 40" fill="none">
-      <rect x="4" y="4" width="32" height="32" rx="8" stroke="#00D4FF" strokeWidth="1.5" />
-      <path d="M12 16h16M12 20h10M12 24h13" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+      <rect x="4" y="4" width="32" height="32" rx="8" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M12 16h16M12 20h10M12 24h13" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   ),
   backend: (
     <svg viewBox="0 0 40 40" fill="none">
-      <polygon points="20,4 36,12 36,28 20,36 4,28 4,12" stroke="#FF6B9D" strokeWidth="1.5" />
-      <polygon points="20,12 28,16 28,24 20,28 12,24 12,16" stroke="#FF6B9D" strokeWidth="1" opacity="0.5" />
+      <polygon points="20,4 36,12 36,28 20,36 4,28 4,12" stroke="currentColor" strokeWidth="1.5" />
+      <polygon points="20,12 28,16 28,24 20,28 12,24 12,16" stroke="currentColor" strokeWidth="1" opacity="0.5" />
     </svg>
   ),
   automation: (
     <svg viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="10" stroke="#FFB347" strokeWidth="1.5" />
-      <path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="#FFB347" strokeWidth="1.8" strokeLinecap="round" />
+      <circle cx="20" cy="20" r="10" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M20 4v4M20 32v4M4 20h4M32 20h4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   ),
   web3: (
     <svg viewBox="0 0 40 40" fill="none">
-      <path d="M8 32 Q16 8 20 8 Q24 8 32 32" stroke="#A855F7" strokeWidth="1.5" fill="none" />
-      <circle cx="20" cy="20" r="3" fill="#A855F7" />
+      <path d="M8 32 Q16 8 20 8 Q24 8 32 32" stroke="currentColor" strokeWidth="1.5" fill="none" />
+      <circle cx="20" cy="20" r="3" fill="currentColor" />
     </svg>
   ),
   tools: (
     <svg viewBox="0 0 40 40" fill="none">
-      <circle cx="20" cy="20" r="6" fill="none" stroke="#00FFB2" strokeWidth="1.5" />
+      <circle cx="20" cy="20" r="6" fill="none" stroke="currentColor" strokeWidth="1.5" />
       <path
         d="M20 4L20 14M20 26L20 36M4 20L14 20M26 20L36 20M8 8L15 15M25 25L32 32M32 8L25 15M15 25L8 32"
-        stroke="#00FFB2"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
@@ -103,19 +103,22 @@ export default function AboutPage() {
         <div className="container">
           <div className="about-grid">
             <div className="about-visual">
-              <div className="about-image-wrap">
-                <div className="about-image-placeholder">
-                  <AboutCanvas />
-                </div>
-                <div className="about-tag tag-1">AI · RAG · LLMs</div>
-                <div className="about-tag tag-2">Next.js + TypeScript</div>
-                <div className="about-tag tag-3">Python · Automation</div>
+              <div className="index-card reveal-up">
+                <span className="index-card-title">Fernando Mendez</span>
+                <dl>
+                  <div><dt>Role</dt><dd>AI &amp; full-stack developer</dd></div>
+                  <div><dt>Based in</dt><dd>Venezuela · remote</dd></div>
+                  <div><dt>Building with</dt><dd>Next.js, TypeScript, Python</dd></div>
+                  <div><dt>Studying</dt><dd>B.S. Software Development, BYU-Idaho</dd></div>
+                  <div><dt>Speaks</dt><dd>English &amp; Spanish</dd></div>
+                </dl>
+                <HandNote point="down" className="index-card-note">hi, nice to meet you</HandNote>
               </div>
             </div>
             <div className="about-text">
               <span className="section-label reveal-up">About Me</span>
               <h2 className="section-title reveal-up">
-                From idea to <span className="gradient-text">AI-powered products</span>
+                From idea to <span className="marker">AI-powered products</span>
               </h2>
               <p className="about-body reveal-up">
                 I&apos;m a Full-Stack Developer pursuing a Bachelor of Software Development at BYU-Idaho. I build
@@ -131,17 +134,11 @@ export default function AboutPage() {
                 <svg viewBox="0 0 160 50" fill="none" className="signature-svg">
                   <path
                     d="M10 40 Q30 5 50 30 Q70 55 90 20 Q110 -10 140 35"
-                    stroke="url(#sig-grad)"
+                    stroke="currentColor"
                     strokeWidth="2.5"
                     fill="none"
                     strokeLinecap="round"
                   />
-                  <defs>
-                    <linearGradient id="sig-grad" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="0%" stopColor="#6C63FF" />
-                      <stop offset="100%" stopColor="#00D4FF" />
-                    </linearGradient>
-                  </defs>
                 </svg>
                 <span>Fernando Mendez</span>
               </div>
@@ -156,7 +153,7 @@ export default function AboutPage() {
           <div className="section-header">
             <span className="section-label reveal-up">Expertise</span>
             <h2 className="section-title reveal-up">
-              The tools I <span className="gradient-text">master</span>
+              The tools I <span className="marker">master</span>
             </h2>
           </div>
           <div className="skills-grid">
@@ -180,7 +177,7 @@ export default function AboutPage() {
           <div className="section-header">
             <span className="section-label reveal-up">Journey</span>
             <h2 className="section-title reveal-up">
-              Where I&apos;ve <span className="gradient-text">worked</span>
+              Where I&apos;ve <span className="marker">worked</span>
             </h2>
           </div>
           <div className="timeline">
@@ -217,7 +214,7 @@ export default function AboutPage() {
           <div className="section-header">
             <span className="section-label reveal-up">Learning</span>
             <h2 className="section-title reveal-up">
-              Education &amp; <span className="gradient-text">Certifications</span>
+              Education &amp; <span className="marker">Certifications</span>
             </h2>
           </div>
 
@@ -251,7 +248,7 @@ export default function AboutPage() {
           <div className="section-header">
             <span className="section-label reveal-up">Beyond Code</span>
             <h2 className="section-title reveal-up">
-              Leadership &amp; <span className="gradient-text">Service</span>
+              Leadership &amp; <span className="marker">Service</span>
             </h2>
           </div>
 

@@ -57,7 +57,7 @@ export default function ArchivePage() {
       />
 
       <header className="archive-header">
-        <Link href="/" className="back-home magnetic">
+        <Link href="/" className="back-link">
           <ArrowIcon />
           <span>Back to Home</span>
         </Link>
@@ -68,7 +68,7 @@ export default function ArchivePage() {
 
       <main>
         <section className="archive-hero">
-          <h1 className="archive-title gradient-text">Archive</h1>
+          <h1 className="archive-title">Archive</h1>
           <p className="archive-subtitle">
             A complete list of everything I&apos;ve built, deployed, and worked on since the start of my software
             journey.
@@ -167,7 +167,7 @@ export default function ArchivePage() {
         </section>
       </main>
 
-      <Footer plainLogo />
+      <Footer brandHref="/" />
     </>
   );
 }

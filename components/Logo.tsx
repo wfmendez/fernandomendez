@@ -1,41 +1,19 @@
-// The "FM" hexagon mark. Pass `gradientId` for the gradient stroke (ids must
-// be unique per page), or omit it for a flat accent-colored stroke.
-type Props = {
-  size?: number;
-  fontSize?: number;
-  gradientId?: string;
-  className?: string;
-};
-
-export default function Logo({ size, fontSize = 14, gradientId, className }: Props) {
+// The "FM" monogram: a hand-inked square with a folded corner, like a
+// notebook tab. Inherits the current text color.
+export default function Logo({ size = 36, className }: { size?: number; className?: string }) {
   return (
-    <svg viewBox="0 0 60 60" fill="none" width={size} height={size} className={className}>
-      <polygon
-        points="30,4 56,18 56,42 30,56 4,42 4,18"
-        stroke={gradientId ? `url(#${gradientId})` : 'var(--accent-1)'}
-        strokeWidth="2"
-        fill="none"
-      />
+    <svg viewBox="0 0 40 40" width={size} height={size} className={className} fill="none" aria-hidden="true">
+      <path d="M4 4h24l8 8v24H4z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+      <path d="M28 4v8h8" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
       <text
-        x="50%"
-        y="55%"
-        dominantBaseline="middle"
+        x="19"
+        y="26.5"
         textAnchor="middle"
-        fill="white"
-        fontFamily="Syne"
-        fontSize={fontSize}
-        fontWeight="800"
+        fill="currentColor"
+        style={{ font: '800 13px var(--font-display)' }}
       >
         FM
       </text>
-      {gradientId && (
-        <defs>
-          <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#6C63FF" />
-            <stop offset="100%" stopColor="#00D4FF" />
-          </linearGradient>
-        </defs>
-      )}
     </svg>
   );
 }

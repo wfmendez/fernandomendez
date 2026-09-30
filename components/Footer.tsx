@@ -7,14 +7,12 @@ type Props = {
   brandHref?: string;
   // In-page anchor for the "Back to top" link; omitted hides the link.
   topHref?: string;
-  // Flat accent stroke instead of the gradient logo.
-  plainLogo?: boolean;
 };
 
-export default function Footer({ brandHref, topHref, plainLogo }: Props) {
+export default function Footer({ brandHref, topHref }: Props) {
   const brand = (
     <>
-      <Logo size={32} gradientId={plainLogo ? undefined : 'foot-grad'} />
+      <Logo size={30} />
       <span>Fernando Mendez</span>
     </>
   );
@@ -29,7 +27,7 @@ export default function Footer({ brandHref, topHref, plainLogo }: Props) {
             <div className="footer-brand">{brand}</div>
           )}
           <p className="footer-copy">
-            Crafted with precision &amp; passion · Venezuela · <CurrentYear />
+            Written and built in Venezuela · <CurrentYear />
           </p>
           {topHref && (
             <div className="footer-links">
