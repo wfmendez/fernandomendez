@@ -7,6 +7,14 @@ import cilMobile from '@/assets/projects/cil-mobile.jpg';
 import cilMock from '@/assets/projects/cil-mock.jpg';
 import cilPractice from '@/assets/projects/cil-practice.jpg';
 import cilWriting from '@/assets/projects/cil-writing.jpg';
+import estacaAssistant from '@/assets/projects/estaca-assistant.jpg';
+import estacaHero from '@/assets/projects/estaca-hero.jpg';
+import estacaHome from '@/assets/projects/estaca-home.jpg';
+import estacaMobile from '@/assets/projects/estaca-mobile.jpg';
+import kenhionHome from '@/assets/projects/kenhion-home.jpg';
+import kenhionMobile from '@/assets/projects/kenhion-mobile.jpg';
+import kenhionProduct from '@/assets/projects/kenhion-product.jpg';
+import kenhionShop from '@/assets/projects/kenhion-shop.jpg';
 import trayectoAscend from '@/assets/projects/trayecto-ascend.jpg';
 import trayectoHome from '@/assets/projects/trayecto-home.jpg';
 import trayectoMobile from '@/assets/projects/trayecto-mobile.jpg';
@@ -50,9 +58,9 @@ export const cases: CaseStudy[] = [
     slug: 'cil',
     name: 'Cíl',
     eyebrow: 'Own product · 2026',
-    tagline: 'Diligence gets you to the goal.',
+    tagline: 'Pick your goal.',
     intro:
-      'A study app for the Cambridge B1 Preliminary, B2 First and C1 Advanced exams. Every exercise explains why the answer is the answer, it works offline without an account, and an optional AI review comments on your writing. Cíl is Czech for goal; it was split off from Píle, Czech for diligence.',
+      'A study app for the Cambridge B1 Preliminary, B2 First and C1 Advanced exams. Every exercise explains why the answer is the answer, it works offline without an account, and an optional AI review comments on your writing. Cíl is Czech for goal.',
     url: 'https://cambridge-helper-cumorah.vercel.app',
     links: [
       { href: 'https://github.com/wfmendez/cambridge-helper-cumorah/releases/latest', label: 'Android & Windows downloads' },
@@ -83,8 +91,8 @@ export const cases: CaseStudy[] = [
         date: 'Sep 29',
         weekId: 'launch-day',
         kind: 'launch',
-        title: 'Cíl ships, split off from Píle',
-        text: 'Exam practice pulled out of Píle into its own app. Deliberately not called anything with "Cambridge" in the name: it is an unofficial study aid and should not suggest otherwise.',
+        title: 'Cíl ships',
+        text: 'Exam practice for B1, B2 and C1 in its own app. Deliberately not called anything with "Cambridge" in the name: it is an unofficial study aid and should not suggest otherwise.',
       },
       {
         date: 'Sep 29',
@@ -258,6 +266,213 @@ export const cases: CaseStudy[] = [
         kind: 'launch',
         title: 'Social links and the map',
         text: 'Instagram, Facebook, TikTok and YouTube in the footer, a social section on the About page and the final Google Maps link.',
+      },
+    ],
+  },
+  {
+    slug: 'kenhion-allen',
+    name: 'Kenhion Allen',
+    eyebrow: 'Client case · 2026',
+    tagline: 'Más allá del límite.',
+    intro:
+      'An online shop for a sportswear brand from Maracay, Venezuela. Customers browse the KA ELITE collection, pick colour and size, get a wholesale discount from six pieces, and send the order over WhatsApp with a PDF receipt. Payment is arranged in the chat.',
+    url: 'https://kenhion-allen.vercel.app',
+    links: [{ href: 'https://github.com/wfmendez/kenhion-allen', label: 'Source on GitHub' }],
+    cover: {
+      src: kenhionHome,
+      alt: 'Kenhion Allen home page: the slogan "Más allá del límite" in gold script next to an athlete training on rings',
+    },
+    mobile: { src: kenhionMobile, alt: 'Kenhion Allen home page on a phone' },
+    facts: [
+      { label: 'Dates', value: 'Aug 12 – Oct 2, 2026' },
+      { label: 'Client', value: 'Sportswear brand · Maracay' },
+      { label: 'Stack', value: 'Next.js 16 · Zod · react-pdf · Playwright' },
+    ],
+    stats: [
+      { value: '21', label: 'pull requests' },
+      { value: '19', label: 'test files' },
+      { value: '6', label: 'build phases' },
+    ],
+    weeks: [
+      { id: 'demo', label: 'Aug 12 · Redesign demo' },
+      { id: 'phases', label: 'Sep 25 · Phases 0–3' },
+      { id: 'checkout', label: 'Sep 29 · Checkout & CI' },
+      { id: 'collection', label: 'Oct 1–2 · KA ELITE & launch' },
+    ],
+    entries: [
+      {
+        date: 'Aug 12',
+        weekId: 'demo',
+        kind: 'launch',
+        title: 'A redesign demo for the brand',
+        text: 'A light boutique redesign of the shop, migrated the same day to Next.js with a fully responsive layout.',
+      },
+      {
+        date: 'Sep 25',
+        weekId: 'phases',
+        kind: 'decision',
+        title: 'Rebuilt in phases, one pull request each',
+        text: 'Phase 0 set up the tooling: strict TypeScript, ESLint, Prettier, Vitest and Playwright. Every phase after it shipped as its own reviewed pull request.',
+      },
+      {
+        date: 'Sep 25',
+        kind: 'build',
+        title: 'Business rules first, with tests',
+        text: 'Catalog, cart, customer and order were modelled with Zod and covered by tests before any page existed, including the 15% wholesale discount from six pieces.',
+      },
+      {
+        date: 'Sep 25',
+        kind: 'design',
+        title: 'A design system for the new brand',
+        text: 'Brand tokens on Tailwind CSS v4, then a multi-page site: a shop with filters kept in the URL, services, gallery, about and FAQ.',
+        image: {
+          src: kenhionShop,
+          alt: 'Kenhion Allen shop page with search, gender filters, sorting and the KA ELITE products',
+          caption: 'The shop, with filters kept in the URL',
+        },
+      },
+      {
+        date: 'Sep 29',
+        weekId: 'checkout',
+        kind: 'build',
+        title: 'Checkout with a PDF receipt',
+        text: 'A checkout form validated with react-hook-form and Zod, a non-fiscal PDF receipt generated in the browser, and the order sent through WhatsApp.',
+      },
+      {
+        date: 'Sep 29',
+        kind: 'build',
+        title: 'Quality on every change',
+        text: 'Continuous integration with unit tests, Playwright end-to-end tests with axe accessibility checks, and Lighthouse CI.',
+      },
+      {
+        date: 'Oct 1',
+        weekId: 'collection',
+        kind: 'content',
+        title: 'The KA ELITE collection',
+        text: 'A single catalog with new photos and a colour selector per product, and the brand emblem redrawn from the official logo.',
+        image: {
+          src: kenhionProduct,
+          alt: 'Product page for the men’s short: price, colour swatches, size selector and quantity',
+          caption: 'Colour and size on every product',
+        },
+      },
+      {
+        date: 'Oct 1',
+        kind: 'build',
+        title: 'Sharper, lighter photos',
+        text: 'Product photos moved to AVIF at quality 90 and are served at the right width. The gold gradient slogan no longer clips.',
+      },
+      {
+        date: 'Oct 1',
+        kind: 'decision',
+        title: 'A set counts as two pieces',
+        text: 'The biker and top set now counts as two pieces toward the wholesale discount, as the brand sells it.',
+      },
+      {
+        date: 'Oct 2',
+        kind: 'launch',
+        title: 'Client changes before launch',
+        text: 'Shipping, payments and the home and About copy updated with the client’s feedback.',
+      },
+    ],
+  },
+  {
+    slug: 'estaca-caracas',
+    name: 'Estaca Caracas',
+    eyebrow: 'Volunteer project · 2026',
+    tagline: 'Fe · Familia · Servicio.',
+    intro:
+      'A website for a stake of The Church of Jesus Christ of Latter-day Saints in Caracas. It began as the page for a stake conference and became a permanent portal for anyone who wants to learn about the Church, with an AI assistant that answers questions in a warm, personal voice.',
+    url: 'https://www.estacacaracas.com',
+    cover: {
+      src: estacaHome,
+      alt: 'Estaca Caracas home: "Un lugar para acercarte a Jesucristo" in large serif type on a cream background',
+    },
+    mobile: { src: estacaMobile, alt: 'Estaca Caracas home page on a phone' },
+    facts: [
+      { label: 'Dates', value: 'Apr 23 – Jul 20, 2026' },
+      { label: 'Role', value: 'Volunteer · design and development' },
+      { label: 'Stack', value: 'HTML · CSS · JS · Vercel Functions · Groq' },
+    ],
+    stats: [
+      { value: '119', label: 'commits' },
+      { value: '1', label: 'day to first launch' },
+      { value: '3', label: 'months of updates' },
+    ],
+    weeks: [
+      { id: 'conference', label: 'Apr 23–25 · Conference site' },
+      { id: 'assistant', label: 'Apr 28 · AI assistant' },
+      { id: 'may', label: 'May · Leads and speed' },
+      { id: 'portal', label: 'Jul 20 · Portal' },
+    ],
+    entries: [
+      {
+        date: 'Apr 23',
+        weekId: 'conference',
+        kind: 'launch',
+        title: 'A site for the stake conference, in a day',
+        text: 'Schedule, invitation, contact form and complete SEO and social metadata, live the same day.',
+      },
+      {
+        date: 'Apr 24',
+        kind: 'design',
+        title: 'A full UX pass',
+        text: 'The hero became two columns with the scripture beside the image, and content, mobile, desktop and performance were reviewed end to end.',
+        image: {
+          src: estacaHero,
+          alt: 'Estaca Caracas hero: a scripture from Matthew 11:28 over a painting of Jesus embracing a woman and a child',
+          caption: 'The hero, with the scripture beside the image',
+        },
+      },
+      {
+        date: 'Apr 25',
+        kind: 'build',
+        title: 'Its own domain and faster pages',
+        text: 'Moved to estacacaracas.com, preloaded the main image, compressed photos, fixed contrast and layout shift, and added structured data for the organisation.',
+      },
+      {
+        date: 'Apr 25',
+        kind: 'design',
+        title: 'A contact form that adapts',
+        text: 'Email comes first by default. The phone number only becomes required when someone chooses WhatsApp or a call, with a friendly fallback if sending fails.',
+      },
+      {
+        date: 'Apr 28',
+        weekId: 'assistant',
+        kind: 'build',
+        title: 'An AI missionary assistant',
+        text: 'A chatbot on Groq (Llama 3.1 8B) grounded in official Church content, written in a warm, member-like voice. It offers a free Book of Mormon and says it is an AI when asked.',
+        image: {
+          src: estacaAssistant,
+          alt: 'The open assistant panel: suggested questions and an offer to request a free Book of Mormon',
+          caption: 'The assistant, with suggested questions',
+        },
+      },
+      {
+        date: 'Apr 28',
+        kind: 'build',
+        title: 'Local SEO for Caracas',
+        text: 'Structured data for a religious organisation and its place, geographic metadata and local FAQs.',
+      },
+      {
+        date: 'May 16',
+        weekId: 'may',
+        kind: 'build',
+        title: 'WhatsApp, one tap away',
+        text: 'A floating WhatsApp button, with every tap counted as a lead.',
+      },
+      {
+        date: 'May 21',
+        kind: 'build',
+        title: 'Speed and security',
+        text: 'A Content-Security-Policy, PWA icons, no layout shift on the hero, and interactive scripts deferred until the page is idle.',
+      },
+      {
+        date: 'Jul 20',
+        weekId: 'portal',
+        kind: 'decision',
+        title: 'From event page to information portal',
+        text: 'After the conference, the site became a permanent portal about the stake and the Church instead of being taken down.',
       },
     ],
   },
