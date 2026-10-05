@@ -5,7 +5,7 @@ export type CoverIcon = 'academy' | 'map' | 'chart' | 'graph' | 'leaf';
 export type Project = {
   slug: string;
   name: string;
-  kind: 'Client' | 'Product' | 'Side project';
+  kind: 'Client' | 'Product' | 'Volunteer' | 'Side project';
   // Short context line, e.g. who it was for and when.
   context: string;
   summary: string;
@@ -60,6 +60,24 @@ export const clientProjects: Project[] = [
     link: { href: 'https://amarhte.com', label: 'amarhte.com' },
   },
   {
+    slug: 'kenhion-allen',
+    name: 'Kenhion Allen',
+    kind: 'Client',
+    context: 'Sportswear brand · Maracay, Venezuela · 2026',
+    summary:
+      'An online shop for a sportswear brand: a catalog with filters in the URL, colour and size per product, a cart with a 15% wholesale discount from six pieces, and a checkout that produces a PDF receipt and sends the order over WhatsApp.',
+    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
+    facts: [
+      { label: 'Pull requests', value: '21' },
+      { label: 'Test files', value: '19' },
+      { label: 'Checks', value: 'CI · axe · Lighthouse' },
+    ],
+    caseSlug: 'kenhion-allen',
+    cover: { icon: 'chart', tone: 'ink' },
+    link: { href: 'https://kenhion-allen.vercel.app', label: 'kenhion-allen.vercel.app' },
+    github: 'https://github.com/wfmendez/kenhion-allen',
+  },
+  {
     slug: 'trayecto',
     name: 'Trayecto',
     kind: 'Product',
@@ -75,6 +93,23 @@ export const clientProjects: Project[] = [
     caseSlug: 'trayecto',
     cover: { icon: 'academy', tone: 'moss' },
     link: { href: 'https://trayecto.app', label: 'trayecto.app' },
+  },
+  {
+    slug: 'estaca-caracas',
+    name: 'Estaca Caracas',
+    kind: 'Volunteer',
+    context: 'Church stake · Caracas · 2026',
+    summary:
+      'Started as the site for a stake conference and became a permanent information portal. It has an AI assistant grounded in official Church content, an adaptive contact form, local SEO for Caracas and a careful pass on speed and security.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel Functions', 'Groq'],
+    facts: [
+      { label: 'Commits', value: '119' },
+      { label: 'First launch', value: '1 day' },
+      { label: 'Assistant', value: 'Llama 3.1 via Groq' },
+    ],
+    caseSlug: 'estaca-caracas',
+    cover: { icon: 'map', tone: 'signal' },
+    link: { href: 'https://www.estacacaracas.com', label: 'estacacaracas.com' },
   },
   {
     slug: 'collab-map',
@@ -149,6 +184,34 @@ export const archiveProjects: ArchiveProject[] = [
     highlight: 2,
     href: 'https://amarhte.com',
     linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Kenhion Allen',
+    description:
+      'Online shop for a sportswear brand in Maracay: catalog with URL filters, colour and size per product, 15% wholesale discount from six pieces, PDF order receipt and checkout over WhatsApp. Built in phases with Vitest, Playwright, axe and Lighthouse CI.',
+    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
+    highlight: 2,
+    href: 'https://kenhion-allen.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Estaca Caracas',
+    description:
+      'Volunteer site for a church stake in Caracas, from conference page to information portal: an AI assistant on Groq grounded in official content, adaptive contact form, local SEO, CSP and performance work.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Vercel Functions', 'Groq'],
+    highlight: 2,
+    href: 'https://www.estacacaracas.com',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Money Flow',
+    description:
+      'Site for my workshop on AI, personal finance and employment, with two talks: how to stand out in the AI revolution, and financial intelligence in the digital era. Light and dark themes.',
+    tags: ['Next.js', 'Framer Motion'],
+    highlight: 1,
   },
   {
     year: '2026',
