@@ -117,14 +117,60 @@ export const clientProjects: Project[] = [
     kind: 'Client',
     context: 'Collab Collective Studio · Miami · 2026',
     summary:
-      'A field-sales platform coordinating reps across 3,000+ retail stores. Three Airtable bases and Supabase (PostGIS) meet in one real-time map with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins and in-app navigation.',
+      'A field-sales platform coordinating reps across 5,000+ retail stores. Three Airtable bases and Supabase (PostGIS) meet in one real-time map with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins and in-app navigation.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
     facts: [
-      { label: 'Stores', value: '3,000+' },
+      { label: 'Stores', value: '5,000+' },
       { label: 'Visit logging', value: '4× faster' },
     ],
     cover: { icon: 'map', tone: 'moss' },
     privateLabel: 'Private · built at Collab Collective Studio',
+  },
+  {
+    slug: 'perez-rojas',
+    name: 'Pérez Rojas Abogados',
+    kind: 'Client',
+    context: 'Criminal law firm · Madrid · 2026',
+    summary:
+      'A bilingual website for a Madrid criminal defense firm specialised in economic crime, compliance and European Public Prosecutor (EPPO) cases. Confidential consultation requests, a 24/7 emergency line, a publications section and a page for collaborating law firms.',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Resend', 'Tailwind CSS'],
+    facts: [
+      { label: 'Languages', value: 'ES · EN' },
+      { label: 'Commits', value: '64' },
+    ],
+    cover: { icon: 'chart', tone: 'ink' },
+    link: { href: 'https://www.perezrojasabogados.com/es', label: 'perezrojasabogados.com' },
+  },
+  {
+    slug: 'kenhion-allen',
+    name: 'Kenhion Allen',
+    kind: 'Client',
+    context: 'Clothing brand · Maracay, Venezuela · 2026',
+    summary:
+      'An online store for a sportswear brand: a filterable catalog, product pages with colour and size, a persistent cart with a 15% wholesale discount from 6 pieces, and a checkout that generates a PDF order receipt and sends the order by WhatsApp.',
+    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
+    facts: [
+      { label: 'Commits', value: '49' },
+      { label: 'Tests', value: 'Unit · E2E · a11y' },
+    ],
+    cover: { icon: 'graph', tone: 'signal' },
+    link: { href: 'https://kenhion-allen.vercel.app', label: 'Open the store' },
+  },
+  {
+    slug: 'cumorah-games',
+    name: 'Cumorah classroom games',
+    kind: 'Product',
+    context: 'Cumorah Academy · Czechia · 2026',
+    summary:
+      'Two mobile games for English classes. Campus Challenge follows a student day through 16 mini-games; Academy Party plays on a 3D diorama of the campus with five Houses. The teacher opens a room, shares a QR code, and up to 60 students play live.',
+    tags: ['Node.js', 'Socket.IO', 'Three.js', 'QR rooms'],
+    facts: [
+      { label: 'Players', value: 'Up to 60' },
+      { label: 'Mini-games', value: '16 + 3' },
+    ],
+    cover: { icon: 'academy', tone: 'cobalt' },
+    link: { href: 'https://cumorah-life-campus-challenge.vercel.app', label: 'Play Campus Challenge' },
+    github: 'https://github.com/wfmendez/cumorah-life-campus-challenge',
   },
 ];
 
@@ -165,6 +211,84 @@ export type ArchiveProject = {
 };
 
 export const archiveProjects: ArchiveProject[] = [
+  {
+    year: '2026',
+    title: 'Key Admit Prep',
+    description:
+      'Public website in English, Spanish and French for an admissions-prep service: server-rendered content, international SEO, an interactive Three.js scene and Motion animations, with the groundwork for a CRM.',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Three.js', 'Motion'],
+    highlight: 2,
+    href: 'https://key-admit.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Cumorah Academy Party',
+    description:
+      'A classroom party game in English: five Houses, a 3D diorama based on the Cumorah campus map and three arcade mini-games. The teacher runs each round from a shared room that up to 60 students join by QR code.',
+    tags: ['Node.js', 'Socket.IO', 'Three.js', 'QR rooms'],
+    highlight: 2,
+    href: 'https://cumorah-academy-party.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Entre Fios e Trilhas',
+    description:
+      'Website in Portuguese for group trips that mix art (fios) and nature (trilhas), with an interactive 3D scene.',
+    tags: ['Next.js 16', 'Tailwind CSS', 'Three.js', 'React Three Fiber'],
+    highlight: 2,
+    href: 'https://entre-fios-e-trilhas.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Casitas Cozumel',
+    description:
+      'A private property-management app for rental houses in Cozumel: houses and units, rent and payment tracking, expenses, utility meters and period reports with charts.',
+    tags: ['Next.js 16', 'TypeScript', 'Supabase', 'Three.js'],
+    highlight: 2,
+  },
+  {
+    year: '2026',
+    title: 'Cumorah Life — Campus Challenge',
+    description:
+      'A mobile classroom tournament in English with 16 mini-games that follow a student day. Practice alone, or join a live room by QR code: up to 60 students, each stage timed and scored up to 100 points.',
+    tags: ['Node.js', 'Socket.IO', 'Three.js', 'QR rooms'],
+    highlight: 2,
+    href: 'https://cumorah-life-campus-challenge.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Pérez Rojas Abogados',
+    description:
+      'A bilingual (ES/EN) website for a Madrid criminal defense firm specialised in economic crime, compliance and EPPO cases: confidential consultation requests, a 24/7 emergency line, publications and an Of Counsel page.',
+    tags: ['Next.js 16', 'TypeScript', 'next-intl', 'Resend'],
+    highlight: 2,
+    href: 'https://www.perezrojasabogados.com/es',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'Kenhion Allen',
+    description:
+      'An online store for a sportswear brand from Maracay: filterable catalog, colour and size selection, a cart with a wholesale discount, PDF order receipts and orders sent by WhatsApp. Unit, end-to-end and accessibility tests.',
+    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
+    highlight: 2,
+    href: 'https://kenhion-allen.vercel.app',
+    linkKind: 'live',
+  },
+  {
+    year: '2026',
+    title: 'SCE Core',
+    description:
+      'Contributor and maintainer on an internal PWA for SCE International to create, approve and execute budgets, with real-time expense tracking, in-app and email notifications and document downloads.',
+    tags: ['Next.js 16', 'TypeScript', 'Supabase', 'Resend'],
+    highlight: 2,
+    href: 'https://scecore.app',
+    linkKind: 'live',
+  },
   {
     year: '2026',
     title: 'Cíl',
@@ -257,7 +381,7 @@ export const archiveProjects: ArchiveProject[] = [
     year: '2026',
     title: 'Collab Map',
     description:
-      'An operations platform coordinating field reps across 3,000+ retail stores. Real-time map dashboard with route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins, and turn-by-turn navigation. Reps log visits 4× faster.',
+      'An operations platform coordinating field reps across 5,000+ retail stores. Real-time map dashboard with route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins, and turn-by-turn navigation. Reps log visits 4× faster.',
     tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
     highlight: 2,
   },

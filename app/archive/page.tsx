@@ -11,13 +11,13 @@ import './archive.css';
 
 const title = 'Project & Experience Archive — Fernando Mendez';
 const description =
-  'A complete archive of projects and work experience by Fernando Mendez — AI & Full-Stack Developer.';
+  'A complete archive of projects and work experience by Fernando Mendez — AI Product Engineer.';
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    'Fernando Mendez', 'Archive', 'Projects', 'Experience', 'AI Developer', 'Full Stack Developer',
+    'Fernando Mendez', 'Archive', 'Projects', 'Experience', 'AI Product Engineer', 'Full Stack Developer',
     'Next.js', 'TypeScript', 'Python',
   ],
   robots: { index: true, follow: true },

@@ -27,7 +27,7 @@ export default function Footer({ brandHref, topHref }: Props) {
             <div className="footer-brand">{brand}</div>
           )}
           <p className="footer-copy">
-            Written and built in Venezuela · <CurrentYear />
+            Written and built between Venezuela and Czechia · <CurrentYear />
           </p>
           {topHref && (
             <div className="footer-links">

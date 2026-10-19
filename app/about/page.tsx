@@ -8,9 +8,9 @@ import { certifications, education, skills, volunteering, type SkillIcon } from 
 import { timeline } from '@/data/experience';
 import { SITE_URL, personJsonLd, websiteRef, type NavItem } from '@/data/site';
 
-const title = 'About — Fernando Mendez | AI & Full-Stack Developer';
+const title = 'About — Fernando Mendez | AI Product Engineer';
 const description =
-  'Get to know Fernando Mendez — an AI & Full-Stack Developer from Venezuela. Skills, professional experience, education, certifications, and volunteer leadership.';
+  'Get to know Fernando Mendez — an AI Product Engineer from Venezuela, based in Czechia until December 2026. Skills, professional experience, education, certifications, and volunteer leadership.';
 const socialDescription =
   'Skills, professional experience, education, certifications, and volunteer leadership — the story behind the work.';
 
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    'Fernando Mendez', 'About', 'AI Developer', 'Full Stack Developer', 'LLM', 'RAG', 'Chatbots', 'AI Agents',
-    'Automation', 'n8n', 'Next.js', 'TypeScript', 'Python', 'React', 'Node.js', 'Venezuela',
+    'Fernando Mendez', 'About', 'AI Product Engineer', 'Full Stack Developer', 'LLM', 'RAG', 'AI Agents',
+    'Automation', 'n8n', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Flutter', 'React', 'Venezuela',
   ],
   alternates: { canonical: '/about' },
   openGraph: { type: 'profile', title, description: socialDescription, url: '/about' },
@@ -91,7 +91,7 @@ export default function AboutPage() {
             name: 'About — Fernando Mendez',
             url: `${SITE_URL}/about`,
             description:
-              'Skills, professional experience, education, certifications, and volunteer leadership of Fernando Mendez — AI & Full-Stack Developer.',
+              'Skills, professional experience, education, certifications, and volunteer leadership of Fernando Mendez — AI Product Engineer.',
             isPartOf: websiteRef,
           },
         ]}
@@ -106,11 +106,11 @@ export default function AboutPage() {
               <div className="index-card reveal-up">
                 <span className="index-card-title">Fernando Mendez</span>
                 <dl>
-                  <div><dt>Role</dt><dd>AI &amp; full-stack developer</dd></div>
-                  <div><dt>Based in</dt><dd>Venezuela · remote</dd></div>
-                  <div><dt>Building with</dt><dd>Next.js, TypeScript, Python</dd></div>
+                  <div><dt>Role</dt><dd>AI product engineer</dd></div>
+                  <div><dt>Based in</dt><dd>Czechia until Dec 2026 · remote</dd></div>
+                  <div><dt>Building with</dt><dd>Next.js, TypeScript, Python, Flutter</dd></div>
                   <div><dt>Studying</dt><dd>B.S. Software Development, BYU-Idaho</dd></div>
-                  <div><dt>Speaks</dt><dd>English &amp; Spanish</dd></div>
+                  <div><dt>Speaks</dt><dd>Spanish (native) &amp; English (B2)</dd></div>
                 </dl>
                 <HandNote point="down" className="index-card-note">hi, nice to meet you</HandNote>
               </div>
@@ -121,13 +121,13 @@ export default function AboutPage() {
                 From idea to <span className="marker">AI-powered products</span>
               </h2>
               <p className="about-body reveal-up">
-                I&apos;m a Full-Stack Developer pursuing a Bachelor of Software Development at BYU-Idaho. I build
-                production AI applications — LLM-powered chatbots, RAG systems, and content pipelines — turning
-                models like Llama 3.3 and Claude into products people actually use.
+                I&apos;m an AI Product Engineer pursuing a Bachelor of Software Development at BYU-Idaho. I take an
+                idea from problem definition to production — product flows, frontend, backend, databases, AI
+                integrations and deployment — and build AI systems people actually use, not isolated demos.
               </p>
               <p className="about-body reveal-up">
                 I also architect automation ecosystems — n8n, custom AI agents, and API integrations that replace
-                manual ops with self-running infrastructure. My stack centers on Next.js, TypeScript and Python,
+                manual ops with self-running infrastructure. My stack centers on Next.js, TypeScript, Python and Flutter,
                 backed by PostgreSQL and Supabase — and yes, I&apos;ve shipped on-chain too.
               </p>
               <div className="about-signature reveal-up">

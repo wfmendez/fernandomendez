@@ -10,7 +10,7 @@ export const skills: { icon: SkillIcon; title: string; description: string; leve
   {
     icon: 'frontend',
     title: 'Frontend',
-    description: 'React, Next.js, TypeScript, Vite, Tailwind CSS, Figma-to-code',
+    description: 'React, Next.js, TypeScript, Flutter, Vite, Tailwind CSS, Three.js, Figma-to-code',
     level: 90,
   },
   {
@@ -34,7 +34,7 @@ export const skills: { icon: SkillIcon; title: string; description: string; leve
   {
     icon: 'tools',
     title: 'Languages & Tools',
-    description: 'TypeScript, Python, JavaScript, Solidity · Git, Docker, Vercel · EN/ES bilingual',
+    description: 'TypeScript, Python, JavaScript, Dart, Solidity · Git, Docker, Vercel · Spanish native, English B2',
     level: 90,
   },
 ];

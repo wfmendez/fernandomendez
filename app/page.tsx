@@ -14,16 +14,16 @@ import {
 } from '@/data/site';
 
 const description =
-  'Fernando Mendez — Full-Stack Developer building AI-powered apps: LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript, and Python. Based in Venezuela.';
+  'Fernando Mendez — AI Product Engineer building complete AI-powered products: LLM systems, AI agents and automation with TypeScript, Python, Next.js, FastAPI and Flutter. Based in Czechia until December 2026, working remotely.';
 const socialDescription =
-  'Building AI-powered apps — LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript & Python.';
+  'Building complete AI-powered products, from problem definition to production.';
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description,
   keywords: [
-    'Fernando Mendez', 'AI Developer', 'Full Stack Developer', 'LLM', 'RAG', 'Chatbots', 'AI Agents',
-    'Automation', 'n8n', 'Next.js', 'TypeScript', 'Python', 'React', 'Node.js', 'Venezuela',
+    'Fernando Mendez', 'AI Product Engineer', 'Full Stack Developer', 'LLM', 'RAG', 'AI Agents',
+    'Automation', 'n8n', 'Next.js', 'TypeScript', 'Python', 'FastAPI', 'Flutter', 'React',
   ],
   alternates: { canonical: '/' },
   openGraph: { title: SITE_TITLE, description: socialDescription, url: '/' },
@@ -51,7 +51,7 @@ export default function HomePage() {
             name: SITE_TITLE,
             url: `${SITE_URL}/`,
             description:
-              'Fernando Mendez — Full-Stack Developer building AI-powered apps: LLM chatbots, RAG systems, and automation pipelines with Next.js, TypeScript, and Python.',
+              'Fernando Mendez — AI Product Engineer building complete AI-powered products: LLM systems, AI agents and automation with TypeScript, Python, Next.js, FastAPI and Flutter.',
           },
         ]}
       />
@@ -72,8 +72,8 @@ export default function HomePage() {
               </span>
             </h1>
             <p className="hero-subtitle">
-              Full-stack developer specialised in AI-powered apps: LLM chatbots, RAG systems and automation
-              pipelines with React, TypeScript and Next.js. Based in Venezuela, working with clients anywhere.
+              AI Product Engineer who builds complete software products powered by AI, from problem definition
+              to production. Based in Czechia until December 2026, working remotely with teams anywhere.
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">
@@ -89,12 +89,12 @@ export default function HomePage() {
           <aside className="hero-card" aria-label="Experience">
             <span className="hero-card-label">Field notes</span>
             <p className="hero-stat">
-              <span className="stat-num" data-target="4">0</span>
+              <span className="stat-num" data-target="4">4</span>
               <span className="stat-unit">years shipping software</span>
             </p>
             <ul className="hero-card-list">
-              <li><span>Now</span> Full-stack at Collab Collective Studio</li>
-              <li><span>Stack</span> Next.js · TypeScript · Python</li>
+              <li><span>Now</span> Product engineer at Collab Collective Studio</li>
+              <li><span>Stack</span> Next.js · TypeScript · Python · Flutter</li>
               <li><span>Studying</span> B.S. Software Development, BYU-Idaho</li>
             </ul>
             <HandNote point="left" className="hero-card-note">and counting</HandNote>

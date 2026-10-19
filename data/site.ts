@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://fernandomendez.online';
 export const SITE_NAME = 'Fernando Mendez';
-export const SITE_TITLE = 'Fernando Mendez — AI & Full-Stack Developer';
+export const SITE_TITLE = 'Fernando Mendez — AI Product Engineer';
 export const OG_IMAGE = `${SITE_URL}/assets/og-image.png`;
 
 export const EMAIL = 'wuillian.f.mendez@gmail.com';
@@ -17,15 +17,15 @@ export const personJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: SITE_NAME,
-  jobTitle: 'AI & Full-Stack Developer',
+  jobTitle: 'AI Product Engineer',
   url: `${SITE_URL}/`,
   image: OG_IMAGE,
   email: `mailto:${EMAIL}`,
-  address: { '@type': 'PostalAddress', addressCountry: 'VE' },
+  address: { '@type': 'PostalAddress', addressCountry: 'CZ' },
   alumniOf: { '@type': 'CollegeOrUniversity', name: 'Brigham Young University–Idaho' },
   knowsAbout: [
     'Artificial Intelligence', 'Large Language Models', 'RAG', 'Chatbots', 'AI Agents',
-    'Automation', 'Next.js', 'TypeScript', 'React', 'Node.js', 'Python', 'Web3',
+    'Automation', 'Next.js', 'TypeScript', 'React', 'Node.js', 'Python', 'FastAPI', 'Flutter', 'Web3',
   ],
   sameAs: [GITHUB_URL, LINKEDIN_URL],
 };
