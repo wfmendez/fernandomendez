@@ -169,7 +169,7 @@ export const clientProjects: Project[] = [
       { label: 'Mini-games', value: '16 + 3' },
     ],
     cover: { icon: 'academy', tone: 'cobalt' },
-    link: { href: 'https://cumorah-life-campus-challenge.vercel.app', label: 'Play Campus Challenge' },
+    link: { href: 'https://cumorah-academy-party.vercel.app', label: 'Play Academy Party' },
     github: 'https://github.com/wfmendez/cumorah-life-campus-challenge',
   },
 ];
@@ -256,8 +256,8 @@ export const archiveProjects: ArchiveProject[] = [
       'A mobile classroom tournament in English with 16 mini-games that follow a student day. Practice alone, or join a live room by QR code: up to 60 students, each stage timed and scored up to 100 points.',
     tags: ['Node.js', 'Socket.IO', 'Three.js', 'QR rooms'],
     highlight: 2,
-    href: 'https://cumorah-life-campus-challenge.vercel.app',
-    linkKind: 'live',
+    href: 'https://github.com/wfmendez/cumorah-life-campus-challenge',
+    linkKind: 'github',
   },
   {
     year: '2026',
