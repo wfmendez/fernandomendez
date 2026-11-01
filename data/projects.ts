@@ -83,11 +83,11 @@ export const clientProjects: Project[] = [
     kind: 'Product',
     context: 'Founder · trayecto.app · 2026',
     summary:
-      'An AI system that helps people in Latin America build an international remote career. Vision helps them decide where they are going; Ascend handles the job search, from CV and cover letters to applications and interviews. It began as FPY Academy, a learning platform.',
+      'An AI system that helps people in Latin America build an international remote career, told as one journey on an illustrated map: get to know yourself, plan the move, apply. From personality tests to CV, cover letters and interviews. It began as FPY Academy, a learning platform.',
     tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'NextAuth', 'PWA'],
     facts: [
-      { label: 'Commits', value: '447' },
-      { label: 'Test files', value: '49' },
+      { label: 'Commits', value: '482' },
+      { label: 'Test files', value: '68' },
       { label: 'Languages', value: 'ES · EN · PT' },
     ],
     caseSlug: 'trayecto',
@@ -100,12 +100,12 @@ export const clientProjects: Project[] = [
     kind: 'Volunteer',
     context: 'Church stake · Caracas · 2026',
     summary:
-      'Started as the site for a stake conference and became a permanent information portal. It has an AI assistant grounded in official Church content, an adaptive contact form, local SEO for Caracas and a careful pass on speed and security.',
+      'Started as the site for a stake conference, became a permanent information portal and now announces the next conference too. It has an AI assistant grounded in official Church content, an adaptive contact form, local SEO for Caracas and 133 unit tests.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel Functions', 'Groq'],
     facts: [
-      { label: 'Commits', value: '119' },
+      { label: 'Commits', value: '147' },
       { label: 'First launch', value: '1 day' },
-      { label: 'Assistant', value: 'Llama 3.1 via Groq' },
+      { label: 'Tests', value: '133' },
     ],
     caseSlug: 'estaca-caracas',
     cover: { icon: 'map', tone: 'signal' },
@@ -199,7 +199,7 @@ export const archiveProjects: ArchiveProject[] = [
     year: '2026',
     title: 'Estaca Caracas',
     description:
-      'Volunteer site for a church stake in Caracas, from conference page to information portal: an AI assistant on Groq grounded in official content, adaptive contact form, local SEO, CSP and performance work.',
+      'Volunteer site for a church stake in Caracas, from conference page to information portal and back to announce the November 2026 conference: an AI assistant on Groq grounded in official content, adaptive contact form, local SEO, CSP and 133 unit tests.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Vercel Functions', 'Groq'],
     highlight: 2,
     href: 'https://www.estacacaracas.com',
@@ -215,9 +215,29 @@ export const archiveProjects: ArchiveProject[] = [
   },
   {
     year: '2026',
+    title: 'Talks',
+    description:
+      'Hand-drawn slides that draw themselves as you click, for my talks and classes: failure and success, good design, everyday AI agents with a sung opening video, and an English lesson with animated 3D emojis and an activity on the students’ phones.',
+    tags: ['React', 'Vite', 'Three.js', 'Tailwind'],
+    highlight: 2,
+    href: 'https://github.com/wfmendez/public-speaking',
+    linkKind: 'github',
+  },
+  {
+    year: '2026',
+    title: 'Cumorah Life',
+    description:
+      'A classroom game in English for phones: sixteen mini-games follow a student’s day. The teacher opens a room, shares a QR code and up to 60 students play a tournament at their own pace.',
+    tags: ['JavaScript', 'Node.js', 'Socket.IO', 'Three.js'],
+    highlight: 1,
+    href: 'https://github.com/wfmendez/cumorah-life-campus-challenge',
+    linkKind: 'github',
+  },
+  {
+    year: '2026',
     title: 'Trayecto',
     description:
-      'An AI system for building an international remote career from Latin America, formerly FPY Academy. Vision for personal clarity; Ascend for the job search: AI CV builder, cover letters, application board, remote job search and a personality test with its own model.',
+      'An AI system for building an international remote career from Latin America, formerly FPY Academy. One journey on an illustrated map: personality tests and a free AI compass report, then CV builder, cover letters, application board and remote job search. In Spanish, English and Portuguese.',
     tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'PWA'],
     highlight: 2,
     href: 'https://trayecto.app',

@@ -17,10 +17,10 @@
   --moss:       #1F7A4D;
   --highlight:  rgba(47, 75, 255, 0.13);
 
-  --font-display: 'Bricolage Grotesque', 'Arial Narrow', system-ui, sans-serif;
-  --font-sans:    'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-hand:    'Caveat', 'Segoe Print', 'Bradley Hand', cursive;
+  --font-display: var(--ff-display), 'Arial Narrow', system-ui, sans-serif;
+  --font-sans:    var(--ff-sans), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:    var(--ff-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-hand:    var(--ff-hand), 'Segoe Print', 'Bradley Hand', cursive;
 
   --rule-gap:   32px;
   --radius:     10px;

@@ -37,12 +37,26 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const study = getCase((await params).slug);
   if (!study) return {};
   const title = `${study.name} — Project logbook · ${SITE_NAME}`;
+  // Share the project's own screenshot instead of the generic site card.
+  const image = {
+    url: study.cover.src.src,
+    width: study.cover.src.width,
+    height: study.cover.src.height,
+    alt: study.cover.alt,
+  };
   return {
     title,
     description: study.intro,
     alternates: { canonical: `/work/${study.slug}` },
-    openGraph: { type: 'article', title, description: study.intro, url: `/work/${study.slug}` },
-    twitter: { title, description: study.intro },
+    openGraph: {
+      type: 'article',
+      title,
+      description: study.intro,
+      url: `/work/${study.slug}`,
+      modifiedTime: study.updated,
+      images: [image],
+    },
+    twitter: { title, description: study.intro, images: [image.url] },
   };
 }
 
@@ -59,6 +73,8 @@ export default async function CaseStudyPage({ params }: Params) {
           name: study.name,
           description: study.intro,
           url: `${SITE_URL}/work/${study.slug}`,
+          image: `${SITE_URL}${study.cover.src.src}`,
+          dateModified: study.updated,
           creator: { '@type': 'Person', name: SITE_NAME, url: `${SITE_URL}/` },
         }}
       />
