@@ -1,8 +1,16 @@
 import type { Metadata, Viewport } from 'next';
+import { Bricolage_Grotesque, Caveat, Instrument_Sans, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 import SiteShell from '@/components/SiteShell';
 import { OG_IMAGE, SITE_NAME, SITE_TITLE, SITE_URL } from '@/data/site';
 import './globals.css';
+
+// Self-hosted at build time: no request to Google, no render-blocking
+// stylesheet, and size-adjusted fallbacks so text does not jump on load.
+const display = Bricolage_Grotesque({ subsets: ['latin'], axes: ['opsz'], variable: '--ff-display' });
+const sans = Instrument_Sans({ subsets: ['latin'], style: ['normal', 'italic'], variable: '--ff-sans' });
+const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--ff-mono' });
+const hand = Caveat({ subsets: ['latin'], weight: ['500', '700'], variable: '--ff-hand' });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -17,7 +25,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: { url: '/assets/favicon.svg', type: 'image/svg+xml' },
-    apple: '/assets/favicon.svg',
+    apple: { url: '/assets/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
   },
   openGraph: {
     type: 'website',
@@ -35,17 +43,11 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* Display, text, log metadata and handwritten notes. */}
-        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Caveat:wght@500;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${display.variable} ${sans.variable} ${mono.variable} ${hand.variable}`}
+    >
       <body>
         <SiteShell>{children}</SiteShell>
       </body>

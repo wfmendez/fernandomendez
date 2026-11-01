@@ -47,7 +47,7 @@ export default function ProjectChapter({ project }: { project: Project }) {
   const study = project.caseSlug ? getCase(project.caseSlug) : undefined;
 
   return (
-    <article className="chapter reveal-up">
+    <article className="chapter">
       <div className={`chapter-cover tone-${project.cover.tone}`}>
         {study ? (
           <figure className="taped">
