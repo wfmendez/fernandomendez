@@ -8,6 +8,7 @@ export const PHONE_DISPLAY = '+58 414 489 6306';
 export const WHATSAPP_URL = 'https://wa.me/584144896306';
 export const GITHUB_URL = 'https://github.com/wfmendez';
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/wf-mendez/';
+export const CV_URL = '/Fernando_Mendez_CV.pdf';
 
 // Get a free key at https://web3forms.com. Until it is set, the contact form
 // falls back to opening the visitor's email app.

@@ -1,41 +1,35 @@
 export type SkillIcon = 'ai' | 'frontend' | 'backend' | 'automation' | 'web3' | 'tools';
 
-export const skills: { icon: SkillIcon; title: string; description: string; level: number }[] = [
+export const skills: { icon: SkillIcon; title: string; description: string }[] = [
   {
     icon: 'ai',
     title: 'AI & LLM Apps',
     description: 'RAG, chatbots, prompt engineering · Llama 3.3, Claude, Gemini, Groq, Vercel AI SDK',
-    level: 93,
   },
   {
     icon: 'frontend',
     title: 'Frontend',
     description: 'React, Next.js, TypeScript, Flutter, Vite, Tailwind CSS, Three.js, Figma-to-code',
-    level: 90,
   },
   {
     icon: 'backend',
     title: 'Backend & APIs',
     description: 'Node.js, FastAPI, Express, Prisma, PostgreSQL, Supabase, MongoDB',
-    level: 88,
   },
   {
     icon: 'automation',
     title: 'Automation & Integration',
     description: 'n8n, AI agents, REST APIs, Airtable, Celery, webhooks',
-    level: 88,
   },
   {
     icon: 'web3',
     title: 'Web3 & Blockchain',
     description: 'Solidity, Hardhat, Ethers.js, viem, Wagmi',
-    level: 72,
   },
   {
     icon: 'tools',
     title: 'Languages & Tools',
     description: 'TypeScript, Python, JavaScript, Dart, Solidity · Git, Docker, Vercel · Spanish native, English B2',
-    level: 90,
   },
 ];
 

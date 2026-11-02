@@ -24,6 +24,38 @@ export type Project = {
 
 export const clientProjects: Project[] = [
   {
+    slug: 'trayecto',
+    name: 'Trayecto',
+    kind: 'Product',
+    context: 'Founder · trayecto.app · 2026',
+    summary:
+      'An AI system that helps people in Latin America build an international remote career, told as one journey on an illustrated map: get to know yourself, plan the move, apply. From personality tests to CV, cover letters and interviews. It began as FPY Academy, a learning platform.',
+    tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'NextAuth', 'PWA'],
+    facts: [
+      { label: 'Commits', value: '482' },
+      { label: 'Test files', value: '68' },
+      { label: 'Languages', value: 'ES · EN · PT' },
+    ],
+    caseSlug: 'trayecto',
+    cover: { icon: 'academy', tone: 'moss' },
+    link: { href: 'https://trayecto.app', label: 'trayecto.app' },
+  },
+  {
+    slug: 'collab-map',
+    name: 'Collab Map',
+    kind: 'Client',
+    context: 'Collab Collective Studio · Miami · 2026',
+    summary:
+      'A field-sales platform coordinating reps across 5,000+ retail stores. Three Airtable bases and Supabase (PostGIS) meet in one real-time map with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins and in-app navigation.',
+    tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
+    facts: [
+      { label: 'Stores', value: '5,000+' },
+      { label: 'Visit logging', value: '4× faster' },
+    ],
+    cover: { icon: 'map', tone: 'moss' },
+    privateLabel: 'Private · built at Collab Collective Studio',
+  },
+  {
     slug: 'cil',
     name: 'Cíl',
     kind: 'Product',
@@ -78,23 +110,6 @@ export const clientProjects: Project[] = [
     github: 'https://github.com/wfmendez/kenhion-allen',
   },
   {
-    slug: 'trayecto',
-    name: 'Trayecto',
-    kind: 'Product',
-    context: 'Founder · trayecto.app · 2026',
-    summary:
-      'An AI system that helps people in Latin America build an international remote career, told as one journey on an illustrated map: get to know yourself, plan the move, apply. From personality tests to CV, cover letters and interviews. It began as FPY Academy, a learning platform.',
-    tags: ['Next.js 15', 'TypeScript', 'Prisma', 'Groq', 'NextAuth', 'PWA'],
-    facts: [
-      { label: 'Commits', value: '482' },
-      { label: 'Test files', value: '68' },
-      { label: 'Languages', value: 'ES · EN · PT' },
-    ],
-    caseSlug: 'trayecto',
-    cover: { icon: 'academy', tone: 'moss' },
-    link: { href: 'https://trayecto.app', label: 'trayecto.app' },
-  },
-  {
     slug: 'estaca-caracas',
     name: 'Estaca Caracas',
     kind: 'Volunteer',
@@ -112,21 +127,6 @@ export const clientProjects: Project[] = [
     link: { href: 'https://www.estacacaracas.com', label: 'estacacaracas.com' },
   },
   {
-    slug: 'collab-map',
-    name: 'Collab Map',
-    kind: 'Client',
-    context: 'Collab Collective Studio · Miami · 2026',
-    summary:
-      'A field-sales platform coordinating reps across 5,000+ retail stores. Three Airtable bases and Supabase (PostGIS) meet in one real-time map with a route optimizer (NN → 2-opt → 3-opt), Kalman-smoothed GPS check-ins and in-app navigation.',
-    tags: ['Next.js', 'TypeScript', 'Supabase', 'PostGIS', 'Google Maps'],
-    facts: [
-      { label: 'Stores', value: '5,000+' },
-      { label: 'Visit logging', value: '4× faster' },
-    ],
-    cover: { icon: 'map', tone: 'moss' },
-    privateLabel: 'Private · built at Collab Collective Studio',
-  },
-  {
     slug: 'perez-rojas',
     name: 'Pérez Rojas Abogados',
     kind: 'Client',
@@ -140,21 +140,6 @@ export const clientProjects: Project[] = [
     ],
     cover: { icon: 'chart', tone: 'ink' },
     link: { href: 'https://www.perezrojasabogados.com/es', label: 'perezrojasabogados.com' },
-  },
-  {
-    slug: 'kenhion-allen',
-    name: 'Kenhion Allen',
-    kind: 'Client',
-    context: 'Clothing brand · Maracay, Venezuela · 2026',
-    summary:
-      'An online store for a sportswear brand: a filterable catalog, product pages with colour and size, a persistent cart with a 15% wholesale discount from 6 pieces, and a checkout that generates a PDF order receipt and sends the order by WhatsApp.',
-    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
-    facts: [
-      { label: 'Commits', value: '49' },
-      { label: 'Tests', value: 'Unit · E2E · a11y' },
-    ],
-    cover: { icon: 'graph', tone: 'signal' },
-    link: { href: 'https://kenhion-allen.vercel.app', label: 'Open the store' },
   },
   {
     slug: 'cumorah-games',

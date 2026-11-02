@@ -10,7 +10,7 @@ import { SITE_URL, personJsonLd, websiteRef, type NavItem } from '@/data/site';
 
 const title = 'About — Fernando Mendez | AI Product Engineer';
 const description =
-  'Get to know Fernando Mendez — an AI Product Engineer from Venezuela, based in Czechia until December 2026. Skills, professional experience, education, certifications, and volunteer leadership.';
+  'Get to know Fernando Mendez — an AI Product Engineer from Venezuela, based in Czechia and open to relocation. Skills, professional experience, education, certifications, and volunteer leadership.';
 const socialDescription =
   'Skills, professional experience, education, certifications, and volunteer leadership — the story behind the work.';
 
@@ -162,9 +162,6 @@ export default function AboutPage() {
                 <div className="skill-icon">{skillIcons[skill.icon]}</div>
                 <h3>{skill.title}</h3>
                 <p>{skill.description}</p>
-                <div className="skill-bar">
-                  <div className="skill-fill" data-width={skill.level}></div>
-                </div>
               </div>
             ))}
           </div>

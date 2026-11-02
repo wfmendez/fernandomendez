@@ -49,11 +49,6 @@ export function initPageEffects() {
     intervals.push(ticker);
   }, { threshold: 0.5 });
 
-  // Skill bars
-  observe(qsa('.skill-fill'), el => {
-    el.style.width = el.dataset.width + '%';
-  }, { threshold: 0.5 });
-
   // Smooth in-page anchor scrolling
   document.addEventListener('click', e => {
     const a = (e.target as Element).closest?.('a[href^="#"]');

@@ -576,8 +576,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); text-wrap:
 .skill-icon { width: 42px; height: 42px; color: var(--cobalt); }
 .skill-card h3 { font-size: 1.3rem; font-weight: 700; }
 .skill-card p { color: var(--ink-2); font-size: 0.95rem; }
-.skill-bar { height: 6px; background: var(--paper-2); border-radius: 3px; overflow: hidden; margin-top: 6px; }
-.skill-fill { height: 100%; width: 0; background: var(--ink); transition: width 1.2s var(--ease-out); }
 
 /* ============================================================
    EXPERIENCE — timeline
@@ -816,5 +814,4 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--ink); text-wrap:
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .reveal-up { opacity: 1; transform: none; }
-  .skill-fill { transition: none; }
 }

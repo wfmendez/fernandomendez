@@ -9,12 +9,12 @@ import ProjectChapter from '@/components/ProjectChapter';
 import { ArrowIcon, GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from '@/components/icons';
 import { clientProjects, sideProjects } from '@/data/projects';
 import {
-  EMAIL, GITHUB_URL, LINKEDIN_URL, PHONE_DISPLAY, SITE_TITLE, SITE_URL, WHATSAPP_URL,
+  CV_URL, EMAIL, GITHUB_URL, LINKEDIN_URL, PHONE_DISPLAY, SITE_TITLE, SITE_URL, WHATSAPP_URL,
   personJsonLd, type NavItem,
 } from '@/data/site';
 
 const description =
-  'Fernando Mendez — AI Product Engineer building complete AI-powered products: LLM systems, AI agents and automation with TypeScript, Python, Next.js, FastAPI and Flutter. Based in Czechia until December 2026, working remotely.';
+  'Fernando Mendez — AI Product Engineer building complete AI-powered products: LLM systems, AI agents and automation with TypeScript, Python, Next.js, FastAPI and Flutter. Based in Czechia, open to relocation and remote roles.';
 const socialDescription =
   'Building complete AI-powered products, from problem definition to production.';
 
@@ -63,7 +63,7 @@ export default function HomePage() {
           <div className="hero-copy">
             <p className="kicker">
               <span className="status-dot" aria-hidden="true"></span>
-              Available for new projects
+              Open to relocation &amp; remote roles
             </p>
             <h1 className="hero-title">
               Fernando Mendez
@@ -73,15 +73,15 @@ export default function HomePage() {
             </h1>
             <p className="hero-subtitle">
               AI Product Engineer who builds complete software products powered by AI, from problem definition
-              to production. Based in Czechia until December 2026, working remotely with teams anywhere.
+              to production. Based in Czechia, open to relocating to the EU, UK or US, or to working remotely with teams anywhere.
             </p>
             <div className="hero-actions">
               <a href="#projects" className="btn btn-primary">
                 <span>See the work</span>
                 <ArrowIcon />
               </a>
-              <a href="#contact" className="btn btn-ghost">
-                <span>Let&apos;s talk</span>
+              <a href={CV_URL} className="btn btn-ghost" download>
+                <span>Download CV</span>
               </a>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function HomePage() {
                 Let&apos;s start the <mark className="marker">next entry.</mark>
               </h2>
               <p className="reveal-up">
-                Open to freelance work, remote full-time roles, and AI &amp; automation projects. I reply within
+                Open to full-time roles with relocation, remote positions, and AI &amp; automation projects. I reply within
                 24 hours.
               </p>
               <div className="contact-links reveal-up">
@@ -186,6 +186,10 @@ export default function HomePage() {
                 <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="contact-link">
                   <GitHubIcon />
                   GitHub
+                </a>
+                <a href={CV_URL} className="contact-link" download>
+                  <ArrowIcon />
+                  Download CV (PDF)
                 </a>
               </div>
             </div>

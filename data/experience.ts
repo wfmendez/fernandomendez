@@ -11,22 +11,6 @@ export type TimelineEntry = {
 
 export const timeline: TimelineEntry[] = [
   {
-    period: 'Sep 2026 — Present',
-    title: 'AV Specialist & Technical Support (Internship)',
-    company: 'Cumorah Academy · Načeradec, Czechia · On-site',
-    description:
-      'Set up, test and maintain the computers, projectors, displays and sound for classes, workshops and campus events, and give on-site support to students, teachers and staff.',
-    skills: ['Technical Support', 'AV Systems', 'Troubleshooting'],
-  },
-  {
-    period: 'Mar 2026 — Present',
-    title: 'Founding Member',
-    company: 'DevAccelerator · London, UK · Remote',
-    description:
-      'Founding member of a remote community of software developers and tech professionals: technical and career events, collaborative projects, and shared job opportunities across international markets.',
-    skills: ['Community', 'Networking', 'Collaboration'],
-  },
-  {
     period: 'Oct 2025 — Present',
     title: 'Full-Stack Product Engineer & Automation Systems Manager',
     company: 'Collab Collective Studio · Miami, FL · Remote',
@@ -50,6 +34,22 @@ export const timeline: TimelineEntry[] = [
     description:
       'Built full-stack features and internal tools for AI-powered workflows: dashboards that turn technical activity into business value, real-time feedback and task visibility, and tests around authorization and sensitive data.',
     skills: ['AI Products', 'WebSockets', 'Dashboards', 'Claude Code'],
+  },
+  {
+    period: 'Sep 2026 — Present',
+    title: 'AV Specialist & Technical Support (Internship)',
+    company: 'Cumorah Academy · Načeradec, Czechia · On-site',
+    description:
+      'Set up, test and maintain the computers, projectors, displays and sound for classes, workshops and campus events, and give on-site support to students, teachers and staff.',
+    skills: ['Technical Support', 'AV Systems', 'Troubleshooting'],
+  },
+  {
+    period: 'Mar 2026 — Present',
+    title: 'Founding Member',
+    company: 'DevAccelerator · London, UK · Remote',
+    description:
+      'Founding member of a remote community of software developers and tech professionals: technical and career events, collaborative projects, and shared job opportunities across international markets.',
+    skills: ['Community', 'Networking', 'Collaboration'],
   },
   {
     period: 'Dec 2023 — Jun 2026',
