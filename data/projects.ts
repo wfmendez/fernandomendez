@@ -256,16 +256,6 @@ export const archiveProjects: ArchiveProject[] = [
   },
   {
     year: '2026',
-    title: 'Kenhion Allen',
-    description:
-      'An online store for a sportswear brand from Maracay: filterable catalog, colour and size selection, a cart with a wholesale discount, PDF order receipts and orders sent by WhatsApp. Unit, end-to-end and accessibility tests.',
-    tags: ['Next.js 16', 'TypeScript', 'Zod', 'react-pdf', 'Playwright'],
-    highlight: 2,
-    href: 'https://kenhion-allen.vercel.app',
-    linkKind: 'live',
-  },
-  {
-    year: '2026',
     title: 'SCE Core',
     description:
       'Contributor and maintainer on an internal PWA for SCE International to create, approve and execute budgets, with real-time expense tracking, in-app and email notifications and document downloads.',
