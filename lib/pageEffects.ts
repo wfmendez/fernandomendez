@@ -1,14 +1,13 @@
 import { prefersReducedMotion } from './motion';
 
 // DOM-level enhancements for whatever page is currently rendered: scroll
-// reveals, counters, skill bars and smooth in-page anchors. Runs on every
+// reveals and smooth in-page anchors. Runs on every
 // route change; the returned function undoes everything it set up.
 export function initPageEffects() {
   const reduced = prefersReducedMotion();
   const ac = new AbortController();
   const observers: IntersectionObserver[] = [];
   const timers: ReturnType<typeof setTimeout>[] = [];
-  const intervals: ReturnType<typeof setInterval>[] = [];
 
   const qsa = (s: string) => [...document.querySelectorAll<HTMLElement>(s)];
   const observe = (
@@ -36,19 +35,6 @@ export function initPageEffects() {
     timers.push(setTimeout(() => el.classList.add('visible'), delay));
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-  // Stat counters
-  observe(qsa('.stat-num'), el => {
-    const target = parseInt(el.dataset.target || '0', 10);
-    if (reduced) { el.textContent = String(target); return; }
-    let current = 0;
-    const ticker = setInterval(() => {
-      current += 1;
-      el.textContent = String(current);
-      if (current >= target) clearInterval(ticker);
-    }, 250);
-    intervals.push(ticker);
-  }, { threshold: 0.5 });
-
   // Smooth in-page anchor scrolling
   document.addEventListener('click', e => {
     const a = (e.target as Element).closest?.('a[href^="#"]');
@@ -64,6 +50,5 @@ export function initPageEffects() {
     ac.abort();
     observers.forEach(o => o.disconnect());
     timers.forEach(clearTimeout);
-    intervals.forEach(clearInterval);
   };
 }

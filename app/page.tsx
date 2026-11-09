@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
+import ActivityGraph from '@/components/ActivityGraph';
 import Footer from '@/components/Footer';
-import HandNote from '@/components/HandNote';
+import HeroTerminal from '@/components/HeroTerminal';
 import JsonLd from '@/components/JsonLd';
 import Navbar from '@/components/Navbar';
 import ProjectChapter from '@/components/ProjectChapter';
 import { ArrowIcon, GitHubIcon, LinkedInIcon, MailIcon, PhoneIcon } from '@/components/icons';
+import activity from '@/data/activity.json';
 import { clientProjects, sideProjects } from '@/data/projects';
 import {
   CV_URL, EMAIL, GITHUB_URL, LINKEDIN_URL, PHONE_DISPLAY, SITE_TITLE, SITE_URL, WHATSAPP_URL,
@@ -38,6 +40,11 @@ const navItems: NavItem[] = [
   { href: '/about#education', label: 'Education' },
   { href: '#contact', label: 'Contact' },
 ];
+
+const monthYear = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+const formatDay = (iso: string) =>
+  new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 
 export default function HomePage() {
   return (
@@ -86,19 +93,41 @@ export default function HomePage() {
             </div>
           </div>
 
-          <aside className="hero-card" aria-label="Experience">
-            <span className="hero-card-label">Field notes</span>
-            <p className="hero-stat">
-              <span className="stat-num" data-target="4">4</span>
-              <span className="stat-unit">years shipping software</span>
-            </p>
-            <ul className="hero-card-list">
-              <li><span>Now</span> Product engineer at Collab Collective Studio</li>
-              <li><span>Stack</span> Next.js · TypeScript · Python · Flutter</li>
-              <li><span>Studying</span> B.S. Software Development, BYU-Idaho</li>
-            </ul>
-            <HandNote point="left" className="hero-card-note">and counting</HandNote>
-          </aside>
+          <HeroTerminal />
+        </div>
+      </section>
+
+      {/* ===================== ACTIVITY ===================== */}
+      <section id="activity" className="section activity" aria-labelledby="activity-title">
+        <div className="container">
+          <div className="activity-head">
+            <header className="section-head">
+              <span className="section-label">Activity</span>
+              <h2 id="activity-title" className="section-title">
+                <mark className="marker">{activity.total.toLocaleString('en-US')} commits</mark> since {monthYear(activity.from)}.
+              </h2>
+              <p className="section-intro">
+                Every commit I authored in my own, client and volunteer repositories, counted from their git
+                history. My work at Collab Collective lives in their repositories and is not included.
+              </p>
+            </header>
+            <dl className="activity-stats">
+              <div><dt>Repositories</dt><dd>{activity.repos}</dd></div>
+              <div><dt>Days with commits</dt><dd>{activity.activeDays}</dd></div>
+              <div><dt>Shipped to production</dt><dd>{clientProjects.filter(p => p.link).length}</dd></div>
+            </dl>
+          </div>
+          <figure className="activity-figure">
+            <div className="activity-scroll">
+              <ActivityGraph />
+            </div>
+            <figcaption>
+              <span>Commits per day, {formatDay(activity.from)} – {formatDay(activity.to)}</span>
+              <span className="activity-legend" aria-hidden="true">
+                Less <i className="ag-l0" /><i className="ag-l1" /><i className="ag-l2" /><i className="ag-l3" /><i className="ag-l4" /> More
+              </span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -117,8 +146,8 @@ export default function HomePage() {
           </header>
 
           <div className="chapters">
-            {clientProjects.map(project => (
-              <ProjectChapter key={project.slug} project={project} />
+            {clientProjects.map((project, i) => (
+              <ProjectChapter key={project.slug} project={project} index={i + 1} />
             ))}
           </div>
 

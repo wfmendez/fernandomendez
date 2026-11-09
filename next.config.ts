@@ -1,4 +1,16 @@
+import { execSync } from 'node:child_process';
 import type { NextConfig } from 'next';
+
+// The commit this build comes from, shown in the footer. Vercel provides it;
+// local builds ask git.
+function buildSha() {
+  if (process.env.VERCEL_GIT_COMMIT_SHA) return process.env.VERCEL_GIT_COMMIT_SHA;
+  try {
+    return execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
+  } catch {
+    return '';
+  }
+}
 
 const securityHeaders = [
   { key: 'X-Content-Type-Options', value: 'nosniff' },
@@ -9,6 +21,11 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  env: {
+    BUILD_SHA: buildSha(),
+    BUILD_REF: process.env.VERCEL_GIT_COMMIT_REF ?? 'main',
+    BUILD_DATE: new Date().toISOString(),
+  },
   async headers() {
     return [
       { source: '/(.*)', headers: securityHeaders },

@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import { Bricolage_Grotesque, Caveat, Instrument_Sans, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
+import CommandPalette from '@/components/CommandPalette';
 import SiteShell from '@/components/SiteShell';
+import { commands } from '@/data/commands';
 import { OG_IMAGE, SITE_NAME, SITE_TITLE, SITE_URL } from '@/data/site';
 import './globals.css';
 
@@ -50,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body>
         <SiteShell>{children}</SiteShell>
+        <CommandPalette commands={commands} />
       </body>
     </html>
   );
