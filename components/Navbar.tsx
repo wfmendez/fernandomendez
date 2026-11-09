@@ -1,9 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useState, useSyncExternalStore, type ReactNode } from 'react';
 import Logo from './Logo';
 import type { NavItem } from '@/data/site';
+import { noSubscribe, openPalette, platformMod } from '@/lib/palette';
 
 // In-page anchors stay plain <a> so the smooth-scroll handler owns them;
 // everything else goes through the Next.js router.
@@ -23,6 +24,8 @@ export default function Navbar({ items, ctaHref, logoHref }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  // The palette shortcut, labelled for the visitor's platform once hydrated.
+  const mod = useSyncExternalStore(noSubscribe, platformMod, () => '⌘');
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -69,6 +72,13 @@ export default function Navbar({ items, ctaHref, logoHref }: Props) {
             </li>
           ))}
         </ul>
+        <button type="button" className="nav-search" onClick={openPalette} aria-label="Search the site and jump to a project">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-3.5-3.5" />
+          </svg>
+          <kbd>{mod}K</kbd>
+        </button>
         <NavLink href={ctaHref} className="nav-cta">Hire Me</NavLink>
         <button
           className={'nav-hamburger' + (open ? ' open' : '')}

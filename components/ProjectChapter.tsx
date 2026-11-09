@@ -43,7 +43,7 @@ export const coverIcons: Record<CoverIcon, ReactNode> = {
 // A client or product project told as a large "chapter" on the home page.
 // Uses the case study's screenshot when there is one, otherwise a
 // typographic cover.
-export default function ProjectChapter({ project }: { project: Project }) {
+export default function ProjectChapter({ project, index }: { project: Project; index?: number }) {
   const study = project.caseSlug ? getCase(project.caseSlug) : undefined;
 
   return (
@@ -70,6 +70,7 @@ export default function ProjectChapter({ project }: { project: Project }) {
 
       <div className="chapter-body">
         <p className="chapter-meta">
+          {index !== undefined && <span className="chapter-index">{String(index).padStart(2, '0')}</span>}
           <span className="stamp">{project.kind}</span>
           {project.badge && <span className="stamp stamp-new">{project.badge}</span>}
           {project.context}

@@ -3,8 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/components/Footer';
+import CodeBlock from '@/components/CodeBlock';
 import HandNote from '@/components/HandNote';
 import JsonLd from '@/components/JsonLd';
+import LogFilter from '@/components/LogFilter';
 import LogbookRail from '@/components/LogbookRail';
 import Navbar from '@/components/Navbar';
 import { ArrowIcon, ExternalIcon } from '@/components/icons';
@@ -63,6 +65,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function CaseStudyPage({ params }: Params) {
   const study = getCase((await params).slug);
   if (!study) notFound();
+  const counts: Partial<Record<LogKind, number>> = {};
+  study.entries.forEach(e => { counts[e.kind] = (counts[e.kind] ?? 0) + 1; });
 
   return (
     <>
@@ -138,9 +142,10 @@ export default async function CaseStudyPage({ params }: Params) {
               <p className="section-intro">
                 Written from the project&apos;s commit history. Decisions are marked in red.
               </p>
+              <LogFilter target="log-entries" counts={counts} labels={kindLabel} />
             </header>
 
-            <ol className="log-entries">
+            <ol className="log-entries" id="log-entries">
               {study.entries.map((entry, i) => (
                 <li
                   key={entry.date + entry.title}
@@ -154,6 +159,7 @@ export default async function CaseStudyPage({ params }: Params) {
                     <h3>{entry.title}</h3>
                     <p>{entry.text}</p>
                     {entry.source && <p className="log-source">{entry.source}</p>}
+                    {entry.code && <CodeBlock code={entry.code} />}
                     {entry.image && (
                       <figure className="taped log-figure">
                         <Image src={entry.image.src} alt={entry.image.alt} sizes="(max-width: 860px) 92vw, 560px" placeholder="blur" />

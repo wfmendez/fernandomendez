@@ -35,6 +35,21 @@ Most content edits happen in `data/`: add a project to `data/projects.ts` or a r
    visible change, and rewrite them in plain language.
 3. Set `caseSlug` on the project in `data/projects.ts`. The home page chapter then uses the
    screenshot and links to `/work/<slug>`.
+4. Optionally give an entry a `code` excerpt (file, language, caption and the real source). It is
+   highlighted at build time with Shiki, so the page ships no highlighting JavaScript.
+
+### Refreshing the activity graph
+
+The commit calendar on the home page and the count in the hero terminal come from
+`data/activity.json`. Rebuild it from local clones of the repositories (bare, blobless clones are
+enough):
+
+```bash
+git clone --bare --filter=blob:none https://github.com/<owner>/<repo> clones/<repo>.git   # for each repo
+node scripts/activity.mjs clones 2026-04-01          # counted from that date to today
+```
+
+Only daily counts are written, never repository names or commit messages.
 
 ---
 
@@ -83,11 +98,14 @@ Security and cache headers live in `next.config.ts`, so they apply on any host.
 
 ## 🛠️ Tech
 
-Next.js · React · TypeScript · Google Fonts (Bricolage Grotesque, Instrument Sans, JetBrains Mono,
-Caveat) · [Web3Forms](https://web3forms.com) for the contact form.
+Next.js · React · TypeScript · `next/font` (Bricolage Grotesque, Instrument Sans, JetBrains Mono,
+Caveat) · Shiki · [Web3Forms](https://web3forms.com) for the contact form.
+
+Press <kbd>/</kbd> or <kbd>⌘K</kbd> / <kbd>Ctrl K</kbd> anywhere on the site for the command palette.
 
 ## ♿ Accessibility & performance notes
 
-- Respects `prefers-reduced-motion`: reveals, counters and smooth scrolling are turned off.
+- Respects `prefers-reduced-motion`: reveals, the terminal's typing, counters and smooth scrolling are turned off.
+- The command palette is a modal combobox: arrow keys move, Enter opens, Escape closes and returns focus.
 - Screenshots use `next/image` with blur placeholders and responsive sizes.
 - Decorative SVGs are hidden from screen readers; keyboard focus is visible throughout.

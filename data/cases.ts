@@ -33,6 +33,17 @@ export type LogEntry = {
   // Where the entry comes from, shown in small print.
   source?: string;
   image?: { src: StaticImageData; alt: string; caption: string };
+  // A real excerpt from the project's code, highlighted at build time.
+  code?: CodeExcerpt;
+};
+
+export type CodeExcerpt = {
+  file: string;
+  lang: 'js' | 'ts';
+  caption: string;
+  source: string;
+  // Permalink for public repositories; private ones show the file name only.
+  href?: string;
 };
 
 // A client project told as a dated logbook, built from its git history.
@@ -175,6 +186,23 @@ export const cases: CaseStudy[] = [
         kind: 'decision',
         title: 'No paid review for random keystrokes',
         text: 'Thirty random keystrokes passed the word minimum and cost two AI calls for an error. The server now checks that the answer reads as English before calling a model, with a threshold low enough never to turn a real answer away, and tells the learner what to fix.',
+        code: {
+          file: 'server/writing-review.cjs',
+          lang: 'js',
+          caption: 'The check runs before any provider is called. `common` holds about a hundred English function words.',
+          href: 'https://github.com/wfmendez/cambridge-helper-cumorah/blob/fa4cc10/server/writing-review.cjs#L114-L135',
+          source: `function looksLikeEnglish(text) {
+  const words = text.toLowerCase().match(/[a-z]+/g) || [];
+  if (!words.length) return false;
+  return words.filter(word => common.has(word)).length / words.length >= 0.15;
+}
+
+// …inside validateInput():
+if (!looksLikeEnglish(text)) {
+  throw new ReviewError(422, 'This does not read as an answer in English yet. Write it in full ' +
+    'English sentences, then ask for a review. Your draft is safe.');
+}`,
+        },
       },
       {
         date: 'Oct 21',
@@ -385,7 +413,26 @@ export const cases: CaseStudy[] = [
         date: 'Oct 1',
         kind: 'decision',
         title: 'A set counts as two pieces',
-        text: 'The biker and top set now counts as two pieces toward the wholesale discount, as the brand sells it.',
+        text: 'The biker and top set now counts as two pieces toward the wholesale discount, as the brand sells it. The rule was written as a test first, in the client’s language, with the prices worked out in cents.',
+        code: {
+          file: 'src/features/cart/pricing.test.ts',
+          lang: 'ts',
+          caption: 'Vitest. Three sets are three items but six pieces, so the 15% wholesale discount applies.',
+          href: 'https://github.com/wfmendez/kenhion-allen/blob/1d93da3/src/features/cart/pricing.test.ts#L31-L43',
+          source: `it('el conjunto cuenta como 2 piezas: 3 conjuntos activan el descuento al mayor', () => {
+  const lines = resolveCartLines(
+    [{ productId: 13, color: 'verde', size: 'M', qty: 3 }],
+    products,
+  );
+  const totals = calculateTotals(lines);
+  expect(totals.itemCount).toBe(3);
+  expect(totals.wholesalePieces).toBe(6);
+  expect(totals.isWholesale).toBe(true);
+  // 3 × $44.67 = $134.01; 15% = $20.10
+  expect(totals.discountCents).toBe(2010);
+  expect(totals.totalCents).toBe(11391);
+});`,
+        },
       },
       {
         date: 'Oct 2',
@@ -665,6 +712,37 @@ export const cases: CaseStudy[] = [
         kind: 'decision',
         title: 'One journey instead of two products',
         text: 'The navigation became a map of the whole product: four regions, ten stops, branches and parallel routes. One file describes the map, and a test checks that every stop links to a page that exists.',
+        code: {
+          file: 'lib/journey.test.ts',
+          lang: 'ts',
+          caption: 'The test walks the app directory, turns every page.tsx into a route pattern and checks each link on the map against them.',
+          source: `describe("cada enlace existe como página", () => {
+  const appDir = join(process.cwd(), "app");
+  const routes: RegExp[] = [];
+  const walk = (dir: string) => {
+    for (const name of readdirSync(dir)) {
+      const full = join(dir, name);
+      if (statSync(full).isDirectory()) walk(full);
+      else if (name === "page.tsx") {
+        const url = "/" + relative(appDir, dir).split(sep).filter((seg) => !/^\\(.*\\)$/.test(seg)).join("/");
+        routes.push(new RegExp("^" + url.replace(/\\[[^\\]]+\\]/g, "[^/]+").replace(/\\/$/, "") + "/?$"));
+      }
+    }
+  };
+  walk(appDir);
+
+  const hrefs = [
+    ...STOPS.flatMap((s) => [...s.tools.map((t) => t.href), ...(s.aliases ?? [])]),
+    ...ROUTES.flatMap((r) => [r.href, ...r.tools.map((t) => t.href)]),
+    ...REGIONS.flatMap((r) => [r.href, ...(r.landing ? [r.landing] : [])]),
+  ];
+
+  it.each(hrefs)("%s", (href) => {
+    expect(routes.some((re) => re.test(href))).toBe(true);
+    // …plus a check that Vision tabs exist
+  });
+});`,
+        },
       },
       {
         date: 'Oct 2',
